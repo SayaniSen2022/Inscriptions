@@ -8,45 +8,34 @@
     <title>Inscriptions Home Page</title>
 </head>
 <body>
-    <section class="header">
+    <!--Header-->
+    <section class="hero">
         <nav class="navbar">
-            <div class="header-container">
-                <div class="logo"><a href="#">LOGO</a></div>
-                <div class="navbar-items">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="#">About Us</a>
-                        </li>
+            <h2 class="logo"><a href="#">INSCRIPTIONS</a></h2>
+            <!--Nav Links-->
+            <ul class="nav-links">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Pune Project</a></li>
+                <li><a href="#">Journal</a></li>
+                <li><a href="#">Contact Us</a></li>                
+            </ul>
 
-                        <li class="nav-item">
-                        <a class="nav-link" href="#">Pune Project</a>
-                        </li>
-
-                        <li class="nav-item">
-                        <a class="nav-link" href="#">Journal</a>
-                        </li>
-
-                        <li class="nav-item">
-                        <a class="nav-link" href="#">Contact Us</a>
-                        </li>
-                        <li class="nav-item none">
-                        <i class="fa-solid fa-magnifying-glass yellow"></i>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            <!--Right Side Icons--> 
+            <div class="nav-icons">
+                <button class="menu-toggle" type="button"><i class="fa-solid fa-bars"></i></button>
+                <button class="search-btn" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>           
         </nav>
     </section>
-    <!--Header End-->
-    <!--Banner start-->
-    <section class="top-banner">
-        <div class="top-bnr-con">
-           <img src="./images/home-bnr.webp" alt="banner" width="1280px" height="720px">
+    <!--Serach Overlay-->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-box">
+            <input type="text" placeholder="Search...">
+            <span class="close-btn" id="closeOverlay">&times;</span>
         </div>
-    </section>
+    </div>
+    <!--Header End-->
     <section>
         <div class="top-heading">View List of <span>Inscriptions</span></div>
         <p class="top-subhead">Explore detailed information and insights about the selected inscription</p>
@@ -91,5 +80,8 @@
             <div><a href="#">Ashokan Prakrit inscribedat Sarnath</a></div>
         </div>
     </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./script.js"></script>
 </body>
 </html>

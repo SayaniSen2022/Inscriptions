@@ -1,25 +1,33 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+*{margin: 0;padding: 0;box-sizing: border-box;font-family: "Fraunces", serif;}
+a{text-decoration: none;}
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
-a{text-decoration: none; color: #000;}
-/*Header Starts*/
-.header{position: relative;z-index: 9999;}
-/*navbar web*/
-.navbar{ margin:0; padding: 2rem 18rem;background: #0000002E;color: #fff;}
-.header-container{display: flex;justify-content: space-between;align-items: center;}
-.logo{font-size: 30px;font-weight: 400;font-family: "Poppins", sans-serif;}
-.logo a{color: #F39314;background-color: rgba(0,0,0,0.5);padding: 10px 25px;}
-.navbar-items{font-family: "Poppins", sans-serif;}
-.navbar-items ul{list-style-type: none;display: flex;justify-content: center;align-items: center;gap: 4rem;}
-.navbar-items li a{font-size: 18px;color: #fff;}
+/*Header CSS starts*/
+.hero{height: 300px;width: 100%;background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(./images/home-bnr.webp);background-position: center;background-size: cover;}
+.navbar{display: flex;align-items: center;justify-content: space-between;padding: 5px 8%;background: rgba(0,0,0,0.2);}
+.logo{font-size: 30px;font-weight: 400;background-color: rgba(0,0,0,0.7);padding: 10px;}
+.logo a{color: #F39314;}
+.nav-links{display: flex;list-style: none;gap: 20px;}
+.nav-links li.active {
+  display: none;
+}
+.nav-links li a{font-size: 18px;color: #fff;font-family: "Poppins", sans-serif;font-weight: 400;text-transform: capitalize;}
+.nav-links li a:hover{color: #F39314; transition: 0.3s;}
+.nav-icons{display: flex;gap: 5px;align-items: center;}
+.search-btn{border: none;border-radius: 50%;background-color:#FFF2E2 ;color: #F39314;width: 35px;height: 35px;margin: 10px 15px;cursor: pointer;}
+.search-btn i{color: #F39314;}
+.menu-toggle{display: none; border: none;background: transparent;color: #F39314;font-size: 25px;cursor: pointer;}
 
-/*Header Ends*/
-
-.top-banner{position: relative; height: auto;top: -110px;;}
-.top-bnr-con img{width: 100%;height: 310px;object-fit: cover;}
+/*Overlay css*/
+.search-overlay{display: none; position: fixed; top: 0;left: 0;height: 100vh;width: 100vw;background: rgba(0,0,0,0.8);z-index: 9999;justify-content: center;align-items: center;}
+.search-overlay.active{display: flex;}
+.search-box{position: relative;}
+.search-box input{padding:5px;font-size: 20px;width: 90vw;border: none;outline: none;border-bottom: 1px solid #dddddd;background: transparent;color: white;text-align: center;}
+.search-box input::placeholder{color: #aaa;font-weight: 200;font-size: 18px;}
+.close-btn { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); font-size: 40px; color: #fff; cursor: pointer; padding-left: 10px; }
+/*Header Css Ends*/
 
 .top-heading{text-align: center;font-size: 50px;font-weight: 400;font-family: "Fraunces", serif;}
 .top-heading span{color:#F39314;font-weight: 600;}
@@ -43,3 +51,16 @@ a{text-decoration: none; color: #000;}
 .tag-list ul li{font-size: 15px;font-style: italic;color: #2b2b2b;border-right: 1px solid #dddddd;padding: 10px;}
 
 .right{width: 20%;}
+
+
+
+/*Media Queries*/
+@media (max-width: 768px) {
+  .logo{font-size: 20px;}
+  .nav-links { position: absolute; top: 60px; right: 0; background: #fff; flex-direction: column; width: 100%; display: none; padding: 0px; text-align: left; }
+  .nav-links li a{color: #000 !important;padding: 8px 12px;line-height: 35px;font-size: 14px;}
+  .nav-links li a:hover{color: #F39314 !important;transition: 0.3s;}
+  .nav-links li.active { display: block; background-color: #F39314;}
+  .nav-links li.active a{color: #fff !important;}
+  .menu-toggle { display: inline-block; }
+}
