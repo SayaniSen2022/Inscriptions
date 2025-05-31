@@ -52,3 +52,27 @@
       }
     });
   });
+
+  $(document).ready(function () {
+    // Toggle filter section
+    $('.category-header').on('click', function () {
+      const $icon = $(this).find('.toggle-icon');
+      const $options = $(this).next('.filter-options');
+
+      $options.slideToggle();
+      $icon.toggleClass('fa-caret-down fa-caret-up');
+    });
+
+    // Toggle More / Less
+    $('.toggle-more').on('click', function () {
+      const $more = $(this).siblings('.more-options');
+
+      $more.slideToggle();
+      if ($(this).text() === 'More') {
+        $(this).text('Less');
+      } else {
+        $(this).text('More');
+      }
+    });
+  });
+
