@@ -60,7 +60,7 @@
                         <div><label for="minor"><input type="checkbox" name="minor">Minor</label></div>
                         <div><label for="option4"><input type="checkbox" name="option4">Option4</label></div>
                     </div>
-                    <div class="toggle-more">+More</div>
+                    <div class="toggle-more" data-expanded="false">+More</div>
                 </div>
             </div>
             <div class="filter-category">
@@ -143,7 +143,7 @@
                     <span>Search By Tag</span>
                     <i class="fa-solid fa-angle-down fa-sm toggle-icon"></i>
                 </div>
-                <div class="filter-options">
+                <div class="filter-options search-tags">
                     <div class="tags-container">
                         <span class="tags"><a href="#">temples</a></span>
                         <span class="tags"><a href="#">rulers</a></span>
@@ -157,29 +157,66 @@
         </div>
         <div class="middle">
             <div class="article">
-                <div class="minitags">Major</div>
-                <div class="article-head">Spurious Kapileswar Stone plaque Inscription</div>
-                <div class="tag-list">
-                    <ul>
-                        <li><a href="#">Ashoka's</a></li>
-                        <li><a href="#">1st century BCE</a></li>
-                        <li><a href="#">Copper-Plate Charters</a></li>
-                        <li><a href="#">Western Ghat, near Pune</a></li>
-                        <li><a href="#">Kannada</a></li>
-                    </ul>
+                <div class="content-cont">
+                    <div class="minitags">Major</div>
+                    <div class="article-head">Spurious Kapileswar Stone plaque Inscription</div>
+                    <div class="tag-list">
+                        <ul>
+                            <li><a href="#">Ashoka's</a></li>
+                            <li><a href="#">1st century BCE</a></li>
+                            <li><a href="#">Copper-Plate Charters</a></li>
+                            <li><a href="#">Western Ghat, near Pune</a></li>
+                            <li><a href="#">Kannada</a></li>
+                        </ul>
+                    </div>
+                    <div class="subhead">Introduction</div>
+                    <div class="article-content">The record is on three copper plates secured with a ring and elephant seal. It is in Kannada characters of the 9th century. 
+                        The language of the main portion is Sanskrit and the details of the grant are in Kannada. 
+                        The record gives the genealogy of the Gangas upto Avinīta. The details about each king namely, Kȯnguṇi-mahādhirāja, Mādhava-mahādhirāja, Harivarma-mahādhirāja, 
+                        Vishṇugōpamahādhirāja, Mādhava-Mahādhirāja and Avinīta agree with most of the copper plate records of the Gȧngas hitherto discovered.
+                    </div>
+                    <div class="translation-box">
+                        <div class="subhead lifted-sub">Translation</div>
+                        <div>First Plate Back:</div>
+                        <ol class="article-content script-lines">
+                            <li>svasti jitām bhagavatā gata-ghana-gaganābhēna Padmānābhēna śrīmad-Jāhnāvīya [ku]</li>
+                            <li>lāmalā-vyōm-āvabhasana-bhāśkaraḥ svakhaḍgayka-prahara-khaṇḍita-mahā-silā-stambha-labdha- bala-</li>
+                            <li>parākramō dāraṇōri-gaṇa-vidāraṇōpalabdha-braṇa-vibhūshaṇa-vibhūshita Kaṇvāyana-</li>
+                            <li>sa-gōtrasya śrīmān-Kȯngaṇi-mahādhirāja || tat-putra pitur-anvāgata-guṇa-yuktō vi-</li>
+                            <li>dyā-vineya-vihita-vṛittaḥ samyāk-prajā-paḷanā-mātrādhigata-rājyāt-prayōjana vidvat-ka-</li>
+                            <li>vi-kāñchana-nikāshōpala-bhūtō nīti-sāstrasya vaktri-payōktri-kusalasya Dattaka-sūtra-</li>
+                            <li>vṛittir̤-praṇētāṃ śrimān-Mādhava-mahādhirāja || tat-putra pitṛi-paitamahā-guṇa̲̲-yuktō-vanēka-</li>
+                            <li>chāturddānta-yuddha vāpti-chatur-udadhi-salila-svadita-yasa śrīmad-Harivarmma-mahādhirāja || ta-</li>
+                            <li>t-putra || dvija-guru-dēvatār̤-pūjana-parō Nārayaṇa-charaṇanūdhdhata-śrimad-Vishṇu-gōpa-ma-</li>
+                        </ol>
+                    </div>
+                    <a href="#" target="_blank">
+                        <button type="button" class="full-view-btn">
+                            <span class="text">See Full View</span>
+                            <span class="icon"><i class="fa-solid fa-arrow-right-long"></i></span>
+                        </button>
+                    </a>
+                    
                 </div>
-                <div>Introduction</div>
-                <div>The record is on three copper plates secured with a ring and elephant seal. It is in Kannada characters of the 9th century. 
-                    The language of the main portion is Sanskrit and the details of the grant are in Kannada. 
-                    The record gives the genealogy of the Gangas upto Avinīta. The details about each king namely, Kȯnguṇi-mahādhirāja, Mādhava-mahādhirāja, Harivarma-mahādhirāja, 
-                    Vishṇugōpamahādhirāja, Mādhava-Mahādhirāja and Avinīta agree with most of the copper plate records of the Gȧngas hitherto discovered.
+                <div class="editor-comment">
+                    <div class="edit-icn"><img src="./images/solar_pen-broken.webp" alt="edit-icn"></div>
+                    <div class="e-heading">Editor's Comment:</div>
+                    <div class="e-comment">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto
+                    </div>
                 </div>
             </div>
         </div>
         <div class="right">
-            <div>Index</div>
-            <div><a href="#">Spurious Kapileswar Stone plaque Inscription</a></div>
-            <div><a href="#">Ashokan Prakrit inscribedat Sarnath</a></div>
+            <div class="right-heading">Index</div>
+            <div class="related-links">
+                <div><img src="./images/arrow-right.webp" alt="arrow-right"></div>
+                <div><a class="active" href="#">Spurious Kapileswar Stone plaque Inscription</a></div>
+            </div>
+            <div class="related-links">
+                <div><img src="./images/arrow-right.webp" alt="arrow-right"></div>
+                <div><a href="#">Ashokan Prakrit inscribedat Sarnath</a></div>
+            </div>
         </div>
     </section>
 

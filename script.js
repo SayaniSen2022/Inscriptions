@@ -59,19 +59,21 @@
       const $icon = $(this).find('.toggle-icon');
       const $options = $(this).next('.filter-options');
 
-      $options.slideToggle();
-      $icon.toggleClass('fa-caret-down fa-caret-up');
+      $options.slideToggle(); //sliding animation
+      $icon.toggleClass('fa-angle-down fa-angle-up');
     });
 
     // Toggle More / Less
     $('.toggle-more').on('click', function () {
       const $more = $(this).siblings('.more-options');
+      const isExpanded = $(this).attr('data-expanded') === 'true';
 
       $more.slideToggle();
-      if ($(this).text() === 'More') {
-        $(this).text('Less');
+
+      if (isExpanded) {
+        $(this).text('+More').attr('data-expanded', 'false');
       } else {
-        $(this).text('More');
+        $(this).text('−Less').attr('data-expanded', 'true');
       }
     });
   });
