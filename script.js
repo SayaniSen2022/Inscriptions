@@ -78,3 +78,26 @@
     });
   });
 
+  $('.full-view-btn').on('click', function(){
+    $('.right').show();
+  })
+
+
+  $('.see-original-btn').on('click', function () {
+    $('.translation-box-original').slideToggle(600);
+    $(this).fadeOut("slow");
+  });
+
+  $('.roman-btn').on('click', function () {
+    $('.original-txt-btn').removeClass('active');
+    $(this).addClass('active');    
+    $('.roman-text').show();
+    $('.original-text').hide();
+  });
+
+  $('.original-txt-btn:not(.roman-btn)').on('click', function () {
+    $('.roman-btn').removeClass('active');
+    $(this).addClass('active');    
+    $('.roman-text').hide();
+    $('.original-text').show();
+  });
