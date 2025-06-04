@@ -53,6 +53,8 @@
     });
   });
 
+// Filters Section
+
   $(document).ready(function () {
     // Toggle filter section
     $('.category-header').on('click', function () {
@@ -63,20 +65,28 @@
       $icon.toggleClass('fa-angle-down fa-angle-up');
     });
 
-    // Toggle More / Less
-    $('.toggle-more').on('click', function () {
-      const $more = $(this).siblings('.more-options');
-      const isExpanded = $(this).attr('data-expanded') === 'true';
+    //toggle more and less
 
-      $more.slideToggle();
+    $(".toggle-more").on('click', function () {
+        if (
+          $(".more-filter-options .filters").hasClass(
+            "more-filters"
+          )
+        ) {
+          $(this).text("-Less");
+        } else {
+          $(this).text("+More");
+        }
 
-      if (isExpanded) {
-        $(this).text('+More').attr('data-expanded', 'false');
-      } else {
-        $(this).text('−Less').attr('data-expanded', 'true');
-      }
-    });
+        $(".more-filter-options .filters").toggleClass(
+          "more-filters"
+        );
+      });
+
   });
+
+// Filters Section Ends
+
 
   $('.full-view-btn').on('click', function(){
     $('.right').show();
