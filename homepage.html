@@ -11,15 +11,17 @@
     <!--Header-->
     <section class="hero">
         <nav class="navbar">
-            <h2 class="logo"><a href="#">INSCRIPTIONS</a></h2>
-            <!--Nav Links-->
-            <ul class="nav-links">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Pune Project</a></li>
-                <li><a href="#">Journal</a></li>
-                <li><a href="#">Contact Us</a></li>                
-            </ul>
+            <div class="nav-link-cont">
+                <h2 class="logo"><a href="#">INSCRIPTIONS</a></h2>
+                <!--Nav Links-->
+                <ul class="nav-links">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Pune Project</a></li>
+                    <li><a href="#">Journal</a></li>
+                    <li><a href="#">Contact Us</a></li>                
+                </ul>
+            </div>
 
             <!--Right Side Icons--> 
             <div class="nav-icons">
@@ -37,6 +39,13 @@
     </div>
     <!--Header End-->
     <!--Main page heading-->
+    <section class="home-bnr">
+        <div class="home-bnr-con">
+            <span>
+                <img src="./images/home-bnr.webp" alt="home-bnr">
+            </span>
+        </div>
+    </section>
     <section>
         <div class="top-heading">View List of <span>Inscriptions</span></div>
         <p class="top-subhead">Explore detailed information and insights about the selected inscription</p>
@@ -55,10 +64,10 @@
                 </div>
                 <div class="filter-options more-filter-options">
                     <div class="filters more-filters">
-                        <div><label for="major"><input type="checkbox" name="major">Major</label></div>
-                        <div><label for="featured"><input type="checkbox" name="featured">Featured</label></div>
-                        <div><label for="minor"><input type="checkbox" name="minor">Minor</label></div>
-                        <div><label for="option4"><input type="checkbox" name="option4">Option4</label></div>
+                        <div><label for="major"><input type="checkbox" name="major" class="filter">Major</label></div>
+                        <div><label for="featured"><input type="checkbox" name="featured" class="filter">Featured</label></div>
+                        <div><label for="minor"><input type="checkbox" name="minor" class="filter">Minor</label></div>
+                        <div><label for="option4"><input type="checkbox" name="option4" class="filter">Option4</label></div>
                     </div>                     
                     <div class="toggle-more" data-expanded="false">+More</div>
                 </div>
@@ -157,7 +166,8 @@
         </div>
         <div class="middle">
             <div class="search-container">
-                <input type="text" placeholder="Search Inscriptions...">
+                <div class="search-box-inscription"><input name="search-inscription" type="text" placeholder="Search Inscriptions..."></div>
+                <div class="search-icn"><a href="#"><img src="./images/search.webp" alt="search-icon"></a></div>
             </div>
             <div class="article">
                 <div class="content-cont">
@@ -199,7 +209,7 @@
                             <li>14.    ryya vidvasuprathama-gaṇṇya śrīmān-Kȯngaṇi mahādhirāja Avinīta-nāmadhēya dattasya</li>
                         </ul>
                     </div>
-                    <a href="#">
+                    <a href="./details-page.html" target="_blank">
                         <button type="button" class="full-view-btn">
                             <span class="text">See Full View</span>
                             <span class="icon"><i class="fa-solid fa-arrow-right-long"></i></span>
@@ -301,7 +311,7 @@
                             <li>15.    Dēsiga-gaṇaṃ Koṇḍakundānvaya Guṇachandra-bhaṭāra-sishyasya Abhaṇandi-bhaṭra tasya sishyasya</li>
                         </ul>
                     </div>
-                    <a href="#">
+                    <a href="./details-page.html" target="_blank">
                         <button type="button" class="full-view-btn">
                             <span class="text">See Full View</span>
                             <span class="icon"><i class="fa-solid fa-arrow-right-long"></i></span>
@@ -318,7 +328,7 @@
                 </div>
             </div>
         </div>
-        <div class="right">
+        <div class="right" id="right-block">
             <div class="right-heading">Index</div>
             <div class="related-links">
                 <div><img src="./images/arrow-right.webp" alt="arrow-right"></div>

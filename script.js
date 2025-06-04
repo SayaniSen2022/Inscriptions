@@ -88,9 +88,9 @@
 // Filters Section Ends
 
 
-  $('.full-view-btn').on('click', function(){
-    $('.right').show();
-  })
+  // $('.full-view-btn').on('click', function(){
+  //   $('.right').show();
+  // })
 
 
  //show original script box script section
@@ -117,3 +117,13 @@
     $('.roman-text').hide();
     $('.original-text').show();
   });
+
+
+//displays related links when a filter is selected
+ $(".filter").change(function() {
+        if ($(".filter:checked").length > 0) {
+            $("#right-block").fadeIn();
+        } else {
+            $("#right-block").fadeOut();
+        }
+    });
