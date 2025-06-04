@@ -4,6 +4,17 @@
 *{margin: 0;padding: 0;box-sizing: border-box;font-family: "Fraunces", serif;}
 a{text-decoration: none;color: #000;}
 
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+    background: #EDEDED;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #F39314;
+  }
+
 /***********************************Header CSS starts****************************/
 .hero{height: 300px;width: 100%;background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(./images/home-bnr.webp);background-position: center;background-size: cover;}
 .navbar{display: flex;align-items: center;justify-content: space-between;padding: 5px 8%;background: rgba(0,0,0,0.2);}
@@ -45,11 +56,7 @@ a{text-decoration: none;color: #000;}
 .filter-options{display: none;margin-top: 10px;padding-left: 10px;}
 .filter-options label{display: block;margin: 5px 0;cursor: pointer;font-size: 16px;font-weight: 400;}
 .filter-options input{cursor: pointer;margin-right: 5px;}
-
-    .more-filter-options .more-filters {
-        height: 57px;
-        overflow: hidden;
-    }
+.more-filter-options .more-filters { height: 57px; overflow: hidden; }
 .toggle-more { color: rgba(0,0,0,0.7); cursor: pointer; margin-top: 5px; font-size: 15px;line-height: 24.31px;font-weight: 300; }
 .tags-container{display: flex;flex-wrap: wrap;justify-content: flex-start;gap: 8px;margin-bottom: 15px;}
 .tags{padding: 0 15px;border-radius: 10px;background:#FFF2E2;border: 1px solid #F39314;}
@@ -78,7 +85,7 @@ a{text-decoration: none;color: #000;}
 .article-content{font-weight: 300;font-size: 16px;line-height: 25px;color: #000;margin-bottom: 40px;}
 .text-head{font-weight: 400;font-size: 16px;line-height: 23px;}
 
-.translation-box{border: 1px solid #D0D0D0; border-radius: 7px; padding: 0px 35px;margin-bottom: 25px;}
+.translation-box{padding: 0px 35px;margin-bottom: 25px;border: 1px solid #D0D0D0; border-radius: 7px;}
 
 .full-view-btn { background: linear-gradient(to bottom, #F39314, #FD9D20); color: #fff; padding: 10px 20px; border-radius: 5px; border: none; font-weight: 600; font-size: 16px; 
   line-height: 23px; display: block; cursor: pointer; transition: 0.3s ease-in-out; width: 170px; margin-left: auto; margin-bottom: 25px; position: relative; overflow: hidden; text-align: center; }
@@ -89,14 +96,15 @@ a{text-decoration: none;color: #000;}
 .full-view-btn:hover .icon { display: inline-block; opacity: 1; transform: translateX(0); }
 
 .lifted-sub{position: relative; top: -22px; background: #FFF2E2; padding: 7px; border-radius: 5px; width: fit-content; line-height: 25px;}
-.script-lines{line-height: 36px;list-style: none;height: 423px;overflow-y: scroll;}
+.script-lines{line-height: 36px;list-style: none;height: 385px;overflow-y: scroll;/*scrollbar-color: #F39314 #c2c9d2;  scrollbar-width: thin;*/}
 .editor-comment{display: flex;justify-content: center;gap: 15px;align-items: center;background: #FFF9F0;padding: 12px 25px;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;}
 .edit-icn img{position: relative;top: 4px;}
 .e-heading{font-weight: 400;font-size: 18px;line-height: 20.4px;white-space: nowrap;}
 .e-comment{font-weight: 300;font-size: 15px;line-height: 21px;}
 
 .article-2 .translation-box{margin-top: 45px;}
-.translation-box-original{display: none;margin-top: 45px;padding: 25px 35px;}
+.article-2 .more-content { height: 725px; overflow: hidden; }
+.translation-box-original{margin-top: 45px;padding: 25px 35px;}
 .see-original-btn{margin-left: auto;margin-right: 0;display: block;border: none;border:none;outline: none;cursor: pointer;
   font-size: 18px;font-weight: 600;line-height: 45px;color: #F39314;background: #fff;text-decoration: underline;text-decoration-thickness: 2px;text-underline-offset: 12px;margin-bottom: 35px;}
 

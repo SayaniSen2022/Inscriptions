@@ -93,10 +93,16 @@
   })
 
 
-  $('.see-original-btn').on('click', function () {
-    $('.translation-box-original').slideToggle(600);
-    $(this).fadeOut("slow");
-  });
+ //show original script box script section
+
+ $('.see-original-btn').on('click', function (){
+  if($('.article-2 .content-cont').hasClass('more-content')){
+    $(this).fadeOut(600);
+  }
+  $('.article-2 .content-cont').toggleClass('more-content');
+ });
+
+
 
   $('.roman-btn').on('click', function () {
     $('.original-txt-btn').removeClass('active');
