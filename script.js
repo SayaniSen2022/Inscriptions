@@ -145,12 +145,24 @@
 
 
 
-      var height = $('.det-original-text').height();
-    $(window).scroll(function(){
-        if($(this).scrollTop() > height){
-            $('.lang-btn-container-2').addClass('fixed');
-        }
-        else{
-            $('.lang-btn-container-2').removeClass('fixed');
-        }
-    });
+    // var height = $('.det-original-text').height();
+    // $(window).scroll(function(){
+    //     if($(this).scrollTop() > height){
+    //         $('.lang-btn-container-2').addClass('fixed');
+    //     }
+    //     else{
+    //         $('.lang-btn-container-2').removeClass('fixed');
+    //     }
+    // });
+
+    // var height2 = $('.trans-text').height();
+    // $(window).scroll(function(){
+    //     if($(this).scrollTop() > height2){
+    //         $('.lang-btn-container-2').removeClass('fixed');
+    //         $('.transliteration').addClass('fixed');
+    //     }
+    //     else{
+    //         $('.transliteration').removeClass('fixed');
+    //         $('.lang-btn-container-2').addClass('fixed');
+    //     }
+    // });
