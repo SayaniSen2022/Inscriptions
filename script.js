@@ -127,3 +127,30 @@
             $("#right-block").fadeOut();
         }
     });
+
+
+   $('.rom-btn').on('click', function () {
+    $('.org-btn').removeClass('org-active');
+    $(this).addClass('org-active');    
+    $('.det-roman-text').show();
+    $('.det-original-text').hide();
+  });
+
+  $('.org-btn:not(.rom-btn)').on('click', function () {
+    $('.rom-btn').removeClass('org-active');
+    $(this).addClass('org-active');    
+    $('.det-roman-text').hide();
+    $('.det-original-text').show();
+  });
+
+
+
+      var height = $('.det-original-text').height();
+    $(window).scroll(function(){
+        if($(this).scrollTop() > height){
+            $('.lang-btn-container-2').addClass('fixed');
+        }
+        else{
+            $('.lang-btn-container-2').removeClass('fixed');
+        }
+    });
