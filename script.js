@@ -53,6 +53,43 @@
     });
   });
 
+
+$(document).ready(function() {
+  $(window).scroll(function() {
+    var scrollPos = $(window).scrollTop();
+    
+    var page1Top = $("#article1").offset().top;
+    var page2Top = $("#article2").offset().top;
+    var page3Top = $("#article3").offset().top;
+
+
+    if ($('#right-block').is(":visible") && scrollPos >= page1Top && scrollPos < page2Top) {
+      $("#link1").addClass("link-active");
+      $("#link2").removeClass("link-active");
+      $("#link3").removeClass("link-active");
+    } else {
+      $("#link1").removeClass("link-active");
+    }
+
+    if ($('#right-block').is(":visible") && scrollPos >= page2Top && scrollPos < page3Top) {
+      $("#link2").addClass("link-active");
+      $("#link1").removeClass("link-active");
+      $("#link3").removeClass("link-active");
+    } else {
+      $("#link2").removeClass("link-active");
+    }
+
+    if ($('#right-block').is(":visible") && scrollPos >= page3Top) {
+      $("#link3").addClass("link-active");
+      $("#link1").removeClass("link-active");
+      $("#link2").removeClass("link-active");
+    } else {
+      $("#link3").removeClass("link-active");
+    }
+
+  });
+});
+
 // Filters Section
 
   $(document).ready(function () {
@@ -122,9 +159,9 @@
 //displays related links when a filter is selected
  $(".filter").change(function() {
         if ($(".filter:checked").length > 0) {
-            $("#right-block").fadeIn();
+            $("#right-block").addClass('visible');
         } else {
-            $("#right-block").fadeOut();
+            $("#right-block").removeClass('visible');
         }
     });
 
@@ -166,3 +203,4 @@
     //         $('.lang-btn-container-2').addClass('fixed');
     //     }
     // });
+
