@@ -160,6 +160,7 @@ $(document).ready(function() {
  $(".filter").change(function() {
         if ($(".filter:checked").length > 0) {
             $("#right-block").addClass('visible');
+            $("#link1").addClass("link-active");
         } else {
             $("#right-block").removeClass('visible');
         }
