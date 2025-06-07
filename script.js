@@ -93,6 +93,18 @@ $(document).ready(function() {
 // Filters Section
 
   $(document).ready(function () {
+  // Open filter curtain
+  $('.filter-toggle-btn').on('click', function () {
+    $(this).fadeOut();
+    $('.left').addClass('open');
+  });
+
+  // Close filter curtain
+  $('.close-filter').on('click', function () {
+    $('.left').removeClass('open');
+    $('.filter-toggle-btn').fadeIn();
+  });
+
     // Toggle filter section
     $('.category-header').on('click', function () {
       const $icon = $(this).find('.toggle-icon');
