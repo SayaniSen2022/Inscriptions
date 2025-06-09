@@ -83,20 +83,20 @@ a{text-decoration: none;color: #000;}
 .filter-toggle-btn {
   display: none;
   position: absolute;
-  top: 18rem;
+  top: 28.5rem;
   left: 15px;
   z-index: 1000;
   background: #fff;
   color: #000;
   border: none;
-  padding: 8px 12px;
+  padding: 5px 12px;
   border-radius: 5px;
   font-weight: 400;
   font-family: "Lato", sans-serif;
   font-size: 15px;
   line-height: 19.2px;
   cursor: pointer;
-  border: 2px solid #00000042;
+  border: 1px solid #00000042;
 }
 .filter-toggle-btn img{width: 15px;height: auto;position: relative;top: 2px;}
 .filter-category{border-bottom: 1px solid #E3E3E3;padding: 10px;}
@@ -150,8 +150,8 @@ a{text-decoration: none;color: #000;}
 
 .lifted-sub{position: relative; top: -22px; background: #FFF2E2; padding: 7px; border-radius: 5px; width: fit-content; line-height: 25px;}
 .script-lines{line-height: 36px;list-style: none;height: 385px;overflow-y: scroll;/*scrollbar-color: #F39314 #c2c9d2;  scrollbar-width: thin;*/}
-.editor-comment{display: flex;justify-content: center;gap: 15px;align-items: center;background: #FFF9F0;padding: 12px 25px;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;}
-.edit-icn img{position: relative;top: 4px;}
+.editor-comment{display: flex;justify-content: space-between;gap: 15px;align-items: center;background: #FFF9F0;padding: 12px 25px;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;}
+.edit-icn{position: relative;top: 8px;padding-right: 5px;}
 .e-heading{font-weight: 400;font-size: 18px;line-height: 20.4px;white-space: nowrap;}
 .e-comment{font-weight: 300;font-size: 15px;line-height: 21px;}
 
@@ -178,13 +178,25 @@ a{text-decoration: none;color: #000;}
 /********************RIGHT RELATED LINKS CSS*************/
 .right{visibility: hidden;width: 0;overflow: hidden;transition: width 0.5s ease-in-out;box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   border-radius: 10px;border: 1px solid rgba(243, 147, 20, 0.2);background: #fff1df;padding: 15px;height: fit-content;margin-top: 5.5rem;position: sticky;top: 10px; }
+  .index-header{display: flex;justify-content: space-between;align-items: baseline;}
+.index-btn{background: #FFF3E3;border: 1px solid #F3931469;border-radius: 7px;padding: 8px 10px;display: none;}
+.index-btn.show{display: block;height: fit-content;position: relative;top: 52px;}
 .right.visible{width: 18%;visibility: visible;}
 .right-heading{font-size: 22.42px;font-weight: 400;line-height: 40.35px;}
 .related-links{display: flex;justify-content: flex-start;gap: 5px;border-bottom: 1px solid #F0E6D8;padding: 15px 0;}
 .related-links img{width: 13px;height: auto;}
 .related-links a{font-size: 16px;font-weight: 400;line-height: 22px;color: #000;}
 .link-active{color: #F39314 !important;}
-
+.index-close {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: 0;
+}
+.index-close img{width: 16px;height: 16px;}
 /********************RIGHT RELATED LINKS CSS ENDS******************/
 
 /***********************PAGE DETAILS CSS**************************/
@@ -288,6 +300,13 @@ a{text-decoration: none;color: #000;}
 }
 
 @media (max-width: 768px) {
+  .home-bnr { margin-bottom: -25%; }
+  .home-bnr-con { top: -160px; }
+  .text-container{justify-content: flex-start;}
+  .top-heading{margin-bottom: 10px;}
+  .top-subhead{margin-bottom: 10px;}
+  .middle{width: 100%;}
+  .search-container{margin-bottom: 5.5rem;}
   .navbar{justify-content: space-between;}
   .logo{font-size: 20px;}
   .nav-links { position: absolute; top: 60px; right: 0; background: #fff; flex-direction: column; width: 100%; display: none; padding: 0px; text-align: left; }
@@ -297,31 +316,44 @@ a{text-decoration: none;color: #000;}
   .nav-links li.active a{color: #fff !important;}
   .menu-toggle { display: inline-block; }
   .filter-toggle-btn{display: block;}
-    .left {
-    position: fixed;
-    top: -88px;
-    left: -100%;
-    height: fit-content;
-    z-index: 999;
-    transition: left 0.3s ease-in-out;
-    width: 50%;
-    max-width: 300px;
-    background: #fff;
-    border-radius: 0;
-  } 
-  
-  .left.open {
-    left: 0;
-  }
-    .left.open .close-filter {
-    display: block;
-  }
-   .left.open ~ .filter-toggle-btn {
-    display: none;
-  }
-    .filter-curtain {
-    display: block;
-    width: 80%;
-    max-width: 300px;
-  }
+  .left { position: fixed; top: -88px; left: -100%; height: 100%; overflow-y: scroll; z-index: 999; transition: left 0.3s ease-in-out; width: 50%; max-width: 300px; background: #fff; border-radius: 0; } 
+  .left.open { left: 0; }
+  .left.open .close-filter { display: block; }
+  .left.open ~ .filter-toggle-btn { display: none; }
+  .filter-curtain { display: block; width: 80%; max-width: 300px; }
+  .right{ position: fixed; top: -88px; right: -100%; height: 100%; overflow-y: scroll; z-index: 999; transition: right 0.3s ease-in-out; width: 50%; max-width: 300px; border-radius: 0; } 
+  .right.right-open { right: 0;visibility: visible; }
+  .right.right-open .index-close{display: block;}
+}
+
+
+@media (max-width: 425px){
+  .home-bnr { margin-bottom: -47%;}
+  .home-bnr-con { top: -12rem; }
+  .top-heading{font-size: 35px;margin: 20px 0 10px;}
+  .top-subhead{font-size: 16px;margin-bottom: 5px;}
+  .search-container{margin-bottom: 4.2rem;}
+  .search-container input{line-height: 33.88px;}
+  .filter-toggle-btn{top: 24rem;}
+  .category-header { font-size: 19px; }
+  .filter-options label { font-size: 16px; }
+  .tags{padding: 0 10px;}
+  .tags a{line-height: 30px;font-size: 15px;}
+  .tag-list ul{justify-content: center;flex-wrap: wrap;}
+  .tag-list ul li{font-size: 12px;}
+  .content-cont{padding: 0 15px;}
+  .article{padding-top: 15px;}
+  .article-head { font-size: 20px; line-height: 24px; text-align: center; margin-bottom: 5px; }
+  .minitags{font-size: 13px;text-align: center;}
+  .subhead{font-size: 16px;line-height: 18.34px;}
+  .article-content{font-size: 13px;line-height: 20px;}
+  .translation-box{padding: 0 15px;}
+  .script-lines{height: 280px;}
+  .script-lines li{font-size: 14px;line-height: 26px;}
+  .text-head{font-size: 14px; line-height: 20px;}
+  .editor-comment{flex-direction: column;text-align: center;gap: 5px;}
+  .e-comment {line-height: 17px;}
+  .article-2 .more-content{height: 635px;}
+  .lang-btn-container{margin-top: 15px;}
+  .full-view-btn, .original-txt-btn{width: 120px;font-size: 15px;padding: 10px;}
 }
