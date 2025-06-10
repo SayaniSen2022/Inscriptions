@@ -241,7 +241,7 @@ a{text-decoration: none;color: #000;}
 .roman-script-cont{padding-bottom: 25px;}
 .roman-script{font-weight: 300;font-size: 18px;line-height: 33px;color: #000;}
 .lang-btn-container-2{display: flex;justify-content: space-between;align-items: center;padding-bottom: 30px;}
-.fixed { position: fixed; top: 0; width: 50%; z-index: 1; transition: all 0.3s ease-in-out; margin: auto; background-color: #fff; padding: 15px 0px; }
+.fixed { position: sticky; top: 0; /*width: 50%;*/ z-index: 1; transition: all 0.3s ease-in-out; margin: auto; background-color: #fff; padding: 15px 0px; }
 
 .org-btn{background: linear-gradient(to bottom, #F39314, #FD9D20); color: #fff; border-radius: 5px; border: none; font-weight: 600; font-size: 18px; 
   line-height: 45px;width: 170px;text-align: center;cursor: pointer;}
@@ -254,7 +254,7 @@ a{text-decoration: none;color: #000;}
 .det-roman-text .roman-text-head{font-weight: 600;font-size: 16px;line-height: 45px;color: #000;}
 .det-original-text li, .det-roman-text li, .trans-text li{font-weight: 300;font-size: 16px;line-height: 33px;color: #000;}
 
-.transliteration{background: #FFF;color: #F39314;font-weight: 400;font-size: 24px;line-height: 33px;padding-bottom: 30px;}
+.transliteration{background: #FFF;color: #F39314;font-weight: 400;font-size: 24px;line-height: 33px;/*padding-bottom: 30px;*/}
 .trans-text .box{padding-bottom: 25px;}
 
 .det-editor-comment{display: flex;justify-content: center;gap: 15px;align-items: center;background: #FFEFDA;padding: 12px 25px;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;}
@@ -314,7 +314,7 @@ a{text-decoration: none;color: #000;}
 }
 
 /*****RIGHT BLOCK*****/
-.det-right{width: 20%; border: 1px solid red;}
+.det-right{width: 20%;}
 .det-right-links{box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;border-radius: 10px;border: 1px solid #FADDB799;background: #FFFAF3;padding: 15px;height: fit-content; }
 .det-right-heading{font-size: 22.42px;font-weight: 400;line-height: 40.35px;}
 .det-related-links{display: flex;justify-content: flex-start;gap: 5px;border-bottom: 1px solid #F0E6D8;padding: 15px 0;}
