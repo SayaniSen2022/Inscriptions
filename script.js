@@ -251,10 +251,11 @@ $(document).ready(function() {
 
 
     var height = $('.test').height();
+    var height2 = $('.trans-text').height();
 
-    console.log($('.det-original-text').height());
-    console.log(height);
-    console.log($(this).scrollTop());
+    // console.log($('.det-original-text').height());
+    // console.log(height);
+    // console.log($(this).scrollTop());
 
     $(window).scroll(function(){
         if(height < $(this).scrollTop() < height2){
@@ -265,7 +266,7 @@ $(document).ready(function() {
         }
     });
 
-    var height2 = $('.trans-text').height();
+   
         console.log(height2);
     $(window).scroll(function(){
         if($(this).scrollTop() > height2){
