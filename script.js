@@ -1,17 +1,24 @@
 
   $(document).ready(function () {
     const $overlay = $('#searchOverlay');
+    const $searchBox = $('.search-box');
     const $input = $overlay.find('input');
 
     // Show overlay on button click
     $('.search-btn').on('click', function (e) {
       e.stopPropagation();
       $overlay.addClass('active');
+      setTimeout(() => {
+            $searchBox.css('transform', 'translateX(0)'); // Gradual transition applied
+        }, 100);
     });
 
     // Close overlay on clicking the ✖ icon
     $('#closeOverlay').on('click', function () {
-      $overlay.removeClass('active');
+      $searchBox.css('transform', 'translateX(-400px)'); // Hide smoothly before removing overlay
+        setTimeout(() => {
+            $overlay.removeClass('active');
+        }, 300); 
     });
 
     // Prevent showing cursor by default — only when user clicks input
@@ -23,6 +30,12 @@
   });
 
   /****Navbar hamburger menu for mobile******/
+$(document).ready(function(){
+  $(".hamburger").click(function(){
+    $(this).toggleClass("is-active");
+  });
+});
+
   $(document).ready(function () {
     let isOpen = false;
 
