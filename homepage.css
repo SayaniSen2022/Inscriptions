@@ -288,6 +288,9 @@ a{text-decoration: none;color: #000;}
 .close { position: absolute; top: 5rem; right: 38rem; background: #F39314; cursor: pointer; border-radius: 50%; width: 55px; height: 55px; font-size: 25px; }
 .close i{position: relative;top: 14px; left: 18px;color: #fff;}
 
+/* .fadeOut{animation: slideDown 0.5s ease-in-out;} */
+
+
 @keyframes slideUp {
     from {
         transform: translateY(100%);
@@ -296,6 +299,17 @@ a{text-decoration: none;color: #000;}
     to {
         transform: translateY(0);
         opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(100%);
+        opacity: 0;
     }
 }
 

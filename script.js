@@ -289,4 +289,4 @@ $(document).ready(function() {
             $("#imageModal").fadeOut();
         }
     });
-});
+}); 
