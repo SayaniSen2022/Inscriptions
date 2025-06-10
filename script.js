@@ -272,3 +272,21 @@ $(document).ready(function() {
     //     }
     // });
 
+/*************************Image Gallery Script**************************************/
+
+$(document).ready(function() {
+    $(".gallery-image img").click(function() {
+        $("#zoomedImage").attr("src", $(this).attr("src"));
+        $("#imageModal").fadeIn();
+    });
+
+    $(".close").click(function() {
+        $("#imageModal").fadeOut();
+    });
+
+    $("#imageModal").click(function(e) {
+        if ($(e.target).is("#imageModal")) {
+            $("#imageModal").fadeOut();
+        }
+    });
+});
