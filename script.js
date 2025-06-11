@@ -250,7 +250,7 @@ $(document).ready(function() {
 /**************language switch script for page-details ends****************/
 
 
-    var height = $('.test').height();
+    var height = $('.lang-btn-container-2').height();
     var height2 = $('.trans-text').height();
 
     // console.log($('.det-original-text').height());
@@ -258,7 +258,7 @@ $(document).ready(function() {
     // console.log($(this).scrollTop());
 
     $(window).scroll(function(){
-        if(height < $(this).scrollTop() < height2){
+        if($(this).scrollTop() > height){
             $('.lang-btn-container-2').addClass('fixed');
         }
         else{
