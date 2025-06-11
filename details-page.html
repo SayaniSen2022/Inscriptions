@@ -8,11 +8,11 @@
     <title>Page Details</title>
 </head>
 <body>
-     <!--Header-->
+    <!--Header-->
     <section class="hero">
         <nav class="navbar">
             <div class="nav-link-cont">
-                <h2 class="logo"><a href="#">INSCRIPTIONS</a></h2>
+                <h2 class="logo"><a href="#">LOGO</a></h2>
                 <!--Nav Links-->
                 <ul class="nav-links">
                     <li class="active"><a href="#">Home</a></li>
@@ -25,15 +25,22 @@
 
             <!--Right Side Icons--> 
             <div class="nav-icons">
-                <button class="menu-toggle" type="button"><i class="fa-solid fa-bars"></i></button>
-                <button class="search-btn" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="menu-toggle" type="button">
+                    <!-- <i class="fa-solid fa-bars"></i> -->                     
+                    <div class="hamburger" id="hamburger-6">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </div>
+                </button>
+                <button class="search-btn" type="button"><i class="fa-solid fa-magnifying-glass fa-lg"></i></button>
             </div>           
         </nav>
     </section>
     <!--Serach Overlay-->
     <div class="search-overlay" id="searchOverlay">
         <div class="search-box">
-            <input type="text" placeholder="Search...">
+            <input name="search-site" type="text" placeholder="Search...">
             <span class="close-btn" id="closeOverlay">&times;</span>
         </div>
     </div>
@@ -48,7 +55,7 @@
 
     <!--Page heading-->
     <section>
-        <div class="top-heading">Spurious Kapileswar Stone plaque Inscription</div>
+        <div class="det-top-heading">Spurious Kapileswar Stone plaque Inscription</div>
         <div class="details-tag-list">
             <ul>
                 <li><a href="#">Ashoka's</a></li>
