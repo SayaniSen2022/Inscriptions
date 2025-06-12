@@ -133,24 +133,35 @@ $(document).ready(function() {
     });
 
     //toggle more and less
+$(".toggle-more").on("click", function () {
+    let parentSection = $(this).closest(".filter-options"); // Find the specific section
 
-    $(".toggle-more").on('click', function () {
-        if (
-          $(".more-filter-options .filters").hasClass(
-            "more-filters"
-          )
-        ) {
-          $(this).text("-Less");
-        } else {
-          $(this).text("+More");
-        }
+    if (parentSection.find(".filters").hasClass("more-filters")) {
+        $(this).text("-Less");
+    } else {
+        $(this).text("+More");
+    }
 
-        $(".more-filter-options .filters").toggleClass(
-          "more-filters"
-        );
-      });
+    parentSection.find(".filters").toggleClass("more-filters");
+});
+  //   $(".toggle-more").on('click', function () {
+  //       if (
+  //         $(".more-filter-options .filters").hasClass(
+  //           "more-filters"
+  //         )
+  //       ) {
+  //         $(this).text("-Less");
+  //       } else {
+  //         $(this).text("+More");
+  //       }
 
-  });
+  //       $(".more-filter-options .filters").toggleClass(
+  //         "more-filters"
+  //       );
+  //     });
+
+   });
+
 
 /************Filters Section Ends**************/
 
