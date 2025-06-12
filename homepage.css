@@ -231,10 +231,7 @@ a{text-decoration: none;color: #000;}
 .det-e-heading{font-weight: 400;font-size: 18px;line-height: 20.4px;white-space: nowrap;}
 .det-e-comment{font-weight: 300;font-size: 15px;line-height: 21px;}
 
-.pg-end-cont{border: 1px solid blue;
-    /* width: 58%;
-    margin-left: 15rem; */
-  }
+.pg-end-cont{border: 1px solid blue; margin-left: 15rem;max-width: 1110px;width: 100%;}
 
 .pg-end-btn{display: flex ; justify-content: space-between; align-items: center;}
 .back-btn{border: 1px solid #F39314;color: #F39314;outline: none;border-radius: 5px;background: #fff;width: 130px;text-align: center;font-weight: 600;font-size: 18px;line-height: 40px;cursor: pointer;}
@@ -422,7 +419,7 @@ a{text-decoration: none;color: #000;}
 /*************Media Queries For Page Details****************/
 @media (max-width: 1440px){
   .pg-det-content{padding: 0 8rem;}
-  .gallery{margin-left: 8.5rem;}
+  .pg-end-cont{margin-left: 8rem;max-width: 908px;}
   .img-cont img { width: 290px; height: 290px;}
   .close{right: 26rem;}
   .modal-content{width: 550px;height: 550px;}
@@ -438,7 +435,17 @@ a{text-decoration: none;color: #000;}
   .det-related-links a, .det-tags a{font-size: 14px;}
   .vernacular{font-size: 19px;line-height: 40px;}
   .roman-script{font-size: 16px;}
-  .gallery{width: 87.5%;}
+  .pg-end-cont { margin-left: 4rem; max-width: 641px; }
+}
+
+@media (max-width: 768px){
+      .pg-det-content {
+        padding: 0 4rem;
+        flex-direction: column;
+    }
+        .det-right, .det-left {
+        width: 100%;
+    }
 }
 
 @media (max-width: 600px){
@@ -463,10 +470,9 @@ a{text-decoration: none;color: #000;}
   .det-related-links img{position: relative;top: 3px;}
   .det-tags-heading{font-size: 22px;line-height: 40.31px;margin-bottom: 10px;text-align: center;}
   .det-tags a{font-size: 15px;}
-  .gallery{width: 100%;margin: 30px;}
+  .pg-end-cont { margin-left: 2rem; max-width: 533px; }
   .gallery-head{font-size: 28px;text-align: center;}
-  .img-cont img { width: 174px; height: 174px; }
-  .pg-end-btn{margin: 30px;padding: 0;width: auto;}
+  .img-cont img { width: 165px; height: 165px; }
 }
 
 @media (max-width: 550px){
@@ -486,6 +492,6 @@ a{text-decoration: none;color: #000;}
   .pg-det-content{padding: 0 1rem;}
   .det-intro-details{font-size: 14px;}
   .vernacular, .roman-script { font-size: 14px; line-height: 20px; }
-  .gallery{width: 87%;}  
+  .pg-end-cont{margin-left: 1rem;max-width: 389px;} 
   .img-cont img { width: 117px; height: 117px; }
 }
