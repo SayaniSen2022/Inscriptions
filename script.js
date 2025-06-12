@@ -69,46 +69,6 @@ $(document).ready(function(){
  /****Navbar hamburger menu for mobile ends******/
 
 
-/*******Link highlight with scroll section ******/
-$(document).ready(function() {
-  $(window).scroll(function() {
-    var scrollPos = $(window).scrollTop();
-    
-    // var page1Top = $(".text-container").offset().top;
-    var page1Top = $(window).scrollTop();
-    var page2Top = $("#article2").offset().top;
-    var page3Top = $("#article3").offset().top;
-
-
-    if ($('#right-block').is(":visible") && scrollPos >= page1Top && scrollPos < page2Top) {
-      $("#link1").addClass("link-active");
-      $("#link2").removeClass("link-active");
-      $("#link3").removeClass("link-active");
-    } else {
-      $("#link1").removeClass("link-active");
-    }
-
-    if ($('#right-block').is(":visible") && scrollPos >= page2Top && scrollPos < page3Top) {
-      $("#link2").addClass("link-active");
-      $("#link1").removeClass("link-active");
-      $("#link3").removeClass("link-active");
-    } else {
-      $("#link2").removeClass("link-active");
-    }
-
-    if ($('#right-block').is(":visible") && scrollPos >= page3Top) {
-      $("#link3").addClass("link-active");
-      $("#link1").removeClass("link-active");
-      $("#link2").removeClass("link-active");
-    } else {
-      $("#link3").removeClass("link-active");
-    }
-
-  });
-});
-/*******Link highlight with scroll section ends******/
-
-
 /*************Filters Section starts ********/ 
 
   $(document).ready(function () {
@@ -187,8 +147,7 @@ $(document).ready(function() {
 /*************displays related links when a filter is selected*****************/
  $(".filter").change(function() {
         if ($(".filter:checked").length > 0) {
-            $("#right-block").addClass('visible');
-            // $("#link1").addClass("link-active");
+            $("#right-block").addClass('visible');            
         } else {
             $("#right-block").removeClass('visible');
         }
@@ -197,8 +156,7 @@ $(document).ready(function() {
    if ($(window).width() > 768){
       $(".filter").change(function() {
               if ($(".filter:checked").length > 0) {
-                  $("#right-block").addClass('visible');
-                  // $("#link1").addClass("link-active");
+                  $("#right-block").addClass('visible');                  
               } else {
                   $("#right-block").removeClass('visible');
               }
@@ -221,7 +179,7 @@ $(document).ready(function() {
    })
 
 
-     // Close filter curtain
+  // Close filter curtain
   $('.index-close').on('click', function () {
     $('.right').removeClass('right-open');
     $('.filter-toggle-btn').fadeIn();
@@ -229,6 +187,47 @@ $(document).ready(function() {
  
 /*************displays related links when a filter is selected ends*****************/
 
+/*******Link highlight with scroll section ******/
+$(document).ready(function() {
+  $(window).scroll(function() {
+    var scrollPos = $(window).scrollTop();
+    
+    // var page1Top = $(".text-container").offset().top;
+    var page1Top = $(window).scrollTop(); //topmost position on page
+    var page2Top = $("#article2").offset().top;
+    var page3Top = $("#article3").offset().top;
+
+
+    if ($('#right-block').is(":visible") && scrollPos >= page1Top && scrollPos < page2Top) {
+      $("#link1").addClass("link-active");
+      $("#link2").removeClass("link-active");
+      $("#link3").removeClass("link-active");
+    } else {
+      $("#link1").removeClass("link-active");
+    }
+
+    if ($('#right-block').is(":visible") && scrollPos >= page2Top && scrollPos < page3Top) {
+      $("#link2").addClass("link-active");
+      $("#link1").removeClass("link-active");
+      $("#link3").removeClass("link-active");
+    } else {
+      $("#link2").removeClass("link-active");
+    }
+
+    if ($('#right-block').is(":visible") && scrollPos >= page3Top) {
+      $("#link3").addClass("link-active");
+      $("#link1").removeClass("link-active");
+      $("#link2").removeClass("link-active");
+    } else {
+      $("#link3").removeClass("link-active");
+    }
+
+  });
+});
+/*******Link highlight with scroll section ends******/
+
+
+/************************************************************************INDIVIDUAL SCRIPT PAGE*************************************************************************/
 
  /**************language switch script for page-details****************/
    $('.rom-btn').on('click', function () {
@@ -244,9 +243,9 @@ $(document).ready(function() {
     $('.det-roman-text').hide();
     $('.det-original-text').show();
   });
-/**************language switch script for page-details ends****************/
 
 
+/*********************Fixing the subheads as we scroll down*******************/
     var height = $('.lang-btn-container-2').height();
     var height2 = $('.trans-text').height();
 
@@ -276,8 +275,8 @@ $(document).ready(function() {
         }
     });
 
-/*************************Image Gallery Script**************************************/
 
+/*************************Image Gallery Script**************************************/
 $(document).ready(function() {
     $(".gallery-image img").click(function() {
         $("#zoomedImage").attr("src", $(this).attr("src"));
