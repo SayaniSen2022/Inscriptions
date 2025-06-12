@@ -74,7 +74,8 @@ $(document).ready(function() {
   $(window).scroll(function() {
     var scrollPos = $(window).scrollTop();
     
-    var page1Top = $("#article1").offset().top;
+    // var page1Top = $(".text-container").offset().top;
+    var page1Top = $(window).scrollTop();
     var page2Top = $("#article2").offset().top;
     var page3Top = $("#article3").offset().top;
 
@@ -111,17 +112,17 @@ $(document).ready(function() {
 /*************Filters Section starts ********/ 
 
   $(document).ready(function () {
-  // Open filter curtain
-  $('.filter-toggle-btn').on('click', function () {
-    $(this).fadeOut();
-    $('.left').addClass('open');
-  });
+    // Open filter curtain
+    $('.filter-toggle-btn').on('click', function () {
+      $(this).fadeOut();
+      $('.left').addClass('open');
+    });
 
-  // Close filter curtain
-  $('.close-filter').on('click', function () {
-    $('.left').removeClass('open');
-    $('.filter-toggle-btn').fadeIn();
-  });
+    // Close filter curtain
+    $('.close-filter').on('click', function () {
+      $('.left').removeClass('open');
+      $('.filter-toggle-btn').fadeIn();
+    });
 
     // Toggle filter section
     $('.category-header').on('click', function () {
@@ -133,34 +134,19 @@ $(document).ready(function() {
     });
 
     //toggle more and less
-$(".toggle-more").on("click", function () {
-    let parentSection = $(this).closest(".filter-options"); // Find the specific section
+    $(".toggle-more").on("click", function () {
+        let parentSection = $(this).closest(".filter-options"); // Find the specific section
 
-    if (parentSection.find(".filters").hasClass("more-filters")) {
-        $(this).text("-Less");
-    } else {
-        $(this).text("+More");
-    }
+        if (parentSection.find(".filters").hasClass("more-filters")) {
+            $(this).text("-Less");
+        } else {
+            $(this).text("+More");
+        }
 
-    parentSection.find(".filters").toggleClass("more-filters");
-});
-  //   $(".toggle-more").on('click', function () {
-  //       if (
-  //         $(".more-filter-options .filters").hasClass(
-  //           "more-filters"
-  //         )
-  //       ) {
-  //         $(this).text("-Less");
-  //       } else {
-  //         $(this).text("+More");
-  //       }
+        parentSection.find(".filters").toggleClass("more-filters");
+    });
 
-  //       $(".more-filter-options .filters").toggleClass(
-  //         "more-filters"
-  //       );
-  //     });
-
-   });
+  });
 
 
 /************Filters Section Ends**************/
@@ -202,7 +188,7 @@ $(".toggle-more").on("click", function () {
  $(".filter").change(function() {
         if ($(".filter:checked").length > 0) {
             $("#right-block").addClass('visible');
-            $("#link1").addClass("link-active");
+            // $("#link1").addClass("link-active");
         } else {
             $("#right-block").removeClass('visible');
         }
@@ -212,7 +198,7 @@ $(".toggle-more").on("click", function () {
       $(".filter").change(function() {
               if ($(".filter:checked").length > 0) {
                   $("#right-block").addClass('visible');
-                  $("#link1").addClass("link-active");
+                  // $("#link1").addClass("link-active");
               } else {
                   $("#right-block").removeClass('visible');
               }
