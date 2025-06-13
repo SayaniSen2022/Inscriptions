@@ -275,7 +275,6 @@ $(document).ready(function() {
     });
 
    
-        console.log(height2);
     $(window).scroll(function(){
         if($(this).scrollTop() > height2){
             $('.lang-btn-container-2').removeClass('fixed');
