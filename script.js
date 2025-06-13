@@ -137,6 +137,7 @@ $('.see-original-btn').on('click', function () {
    const $transOriginalBox = $article.find('.translation-box-original');
 
    $transOriginalBox.show();
+   $(this).fadeOut(600);
 });
 
 
@@ -214,12 +215,14 @@ $(document).ready(function() {
     var page1Top = $(window).scrollTop(); //topmost position on page
     var page2Top = $("#article2").offset().top;
     var page3Top = $("#article3").offset().top;
+    var page4Top = $("#article4").offset().top;
 
 
     if ($('#right-block').is(":visible") && scrollPos >= page1Top && scrollPos < page2Top) {
       $("#link1").addClass("link-active");
       $("#link2").removeClass("link-active");
       $("#link3").removeClass("link-active");
+      $("#link4").removeClass("link-active");
     } else {
       $("#link1").removeClass("link-active");
     }
@@ -228,16 +231,27 @@ $(document).ready(function() {
       $("#link2").addClass("link-active");
       $("#link1").removeClass("link-active");
       $("#link3").removeClass("link-active");
+      $("#link4").removeClass("link-active");
     } else {
       $("#link2").removeClass("link-active");
     }
 
-    if ($('#right-block').is(":visible") && scrollPos >= page3Top) {
+    if ($('#right-block').is(":visible") && scrollPos >= page3Top && scrollPos < page4Top) {
       $("#link3").addClass("link-active");
       $("#link1").removeClass("link-active");
       $("#link2").removeClass("link-active");
+      $("#link4").removeClass("link-active");
     } else {
       $("#link3").removeClass("link-active");
+    }
+
+    if ($('#right-block').is(":visible") && scrollPos >= page4Top) {
+      $("#link4").addClass("link-active");
+      $("#link1").removeClass("link-active");
+      $("#link2").removeClass("link-active");
+      $("#link3").removeClass("link-active");
+    } else {
+      $("#link4").removeClass("link-active");
     }
 
   });
