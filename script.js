@@ -122,15 +122,21 @@ $(document).ready(function(){
 //   $('.article-2 .content-cont').toggleClass('more-content');
 //  });
 
- $('.see-original-btn').on('click', function () {
-  const $article = $(this).closest('.article-2'); // or use common article wrapper class
-  const $content = $article.find('.content-cont');
+//  $('.see-original-btn').on('click', function () {
+//   const $article = $(this).closest('.article-2'); // or use common article wrapper class
+//   const $content = $article.find('.content-cont');
 
-  $content.toggleClass('more-content');
+//   $content.toggleClass('more-content');
 
-  if (!$content.hasClass('more-content')) {
-    $(this).fadeOut(600);
-  }
+//   if (!$content.hasClass('more-content')) {
+//     $(this).fadeOut(600);
+//   }
+// });
+$('.see-original-btn').on('click', function () {
+  const $article = $(this).closest('.article-2');
+   const $transOriginalBox = $article.find('.translation-box-original');
+
+   $transOriginalBox.show();
 });
 
 
