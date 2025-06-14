@@ -166,7 +166,7 @@ $(document).on('click', '.see-original-btn', function(){
 
 
 /*************displays related links when a filter is selected*****************/
- $(".filter-name").change(function() {
+ $(".filter-name").click(function() {
         if ($(".filter:checked").length > 0) {
             $("#right-block").addClass('visible');            
         } else {
@@ -175,7 +175,7 @@ $(document).on('click', '.see-original-btn', function(){
     });
 
    if ($(window).width() > 768){
-      $(".filter-name").change(function() {
+      $(".filter-name").click(function() {
               if ($(".filter:checked").length > 0) {
                   $("#right-block").addClass('visible');                  
               } else {
