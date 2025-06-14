@@ -139,7 +139,7 @@ $(document).on('click', '.see-original-btn', function(){
    const $transOriginalBox = $article.find('.translation-box-original');
 
    $transOriginalBox.show();
-   $(this).fadeOut(600);
+   $(this).fadeOut();
 });
 
 
