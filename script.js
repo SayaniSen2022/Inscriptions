@@ -132,7 +132,7 @@ $(document).ready(function(){
 //     $(this).fadeOut(600);
 //   }
 // });
-$('.see-original-btn').on('click', function () {
+$(document).on('click', '.see-original-btn', function(){
   const $article = $(this).closest('.article-2');
    const $transOriginalBox = $article.find('.translation-box-original');
 
