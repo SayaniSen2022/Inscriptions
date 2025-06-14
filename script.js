@@ -76,6 +76,7 @@ $(document).ready(function(){
     // Open filter curtain
     $('.filter-toggle-btn').on('click', function () {
       $(this).fadeOut();
+      // $('.index-btn').css('display', 'block');
       $('.left').addClass('open');
     });
 
@@ -165,7 +166,7 @@ $(document).on('click', '.see-original-btn', function(){
 
 
 /*************displays related links when a filter is selected*****************/
- $(".filter").change(function() {
+ $(".filter-name").change(function() {
         if ($(".filter:checked").length > 0) {
             $("#right-block").addClass('visible');            
         } else {
@@ -174,7 +175,7 @@ $(document).on('click', '.see-original-btn', function(){
     });
 
    if ($(window).width() > 768){
-      $(".filter").change(function() {
+      $(".filter-name").change(function() {
               if ($(".filter:checked").length > 0) {
                   $("#right-block").addClass('visible');                  
               } else {
@@ -182,7 +183,7 @@ $(document).on('click', '.see-original-btn', function(){
               }
           });
    }else{
-    $(".filter").change(function() {
+    $(".filter-name").click(function() {
         if ($(".filter:checked").length > 0) {
           $("#right-block").removeClass('visible');
             $("#indexbtn").addClass('show');
@@ -194,6 +195,7 @@ $(document).on('click', '.see-original-btn', function(){
 
    $("#indexbtn").on('click', function(){
     $('.left').removeClass('open');
+    $('.filter-toggle-btn').fadeIn();
     $(this).fadeOut();
     $('.right').addClass('right-open');
    })
@@ -202,7 +204,8 @@ $(document).on('click', '.see-original-btn', function(){
   // Close filter curtain
   $('.index-close').on('click', function () {
     $('.right').removeClass('right-open');
-    $('.filter-toggle-btn').fadeIn();
+    $('#indexbtn').fadeIn();
+    // $('.filter').prop('checked', false);
   });
  
 /*************displays related links when a filter is selected ends*****************/

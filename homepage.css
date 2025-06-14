@@ -407,6 +407,8 @@ a{text-decoration: none;color: #000;}
   .search-container input{padding: 0 10px;}
   .search-container input::placeholder{font-size: 14px;}
   .load-more{left: 44%;}
+  .left{width: 60%;}
+  .right.visible{width: 65%;}
 }
 
 @media (max-width: 430px){
@@ -442,6 +444,20 @@ a{text-decoration: none;color: #000;}
 
 @media (max-width: 375px){
 .top-heading { font-size: 28px; margin: 23px 0 10px; }
+.related-links a{font-size: 13px;}
+.filter-options label{font-size: 14px;}
+.category-header{font-size: 15px;}
+.tags{padding: 0 8px;}
+.tags a{line-height: 25px;font-size: 13px;}
+}
+
+@media (max-width: 320px){
+  .home-bnr{margin-bottom: -55%;}
+  .top-heading { font-size: 24px; margin: 15px 0 10px; }
+  .top-subhead{font-size: 14px;}
+  .filter-toggle-btn{top: 23.8rem;}
+  .tag-list ul li{font-size: 10px;line-height: 9.5px;}
+  
 }
 
 /*************Media Queries For Page Details****************/
