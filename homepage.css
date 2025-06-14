@@ -127,13 +127,66 @@ a{text-decoration: none;color: #000;}
 
 .translation-box{padding: 0px 35px;margin-bottom: 25px;border: 1px solid #D0D0D0; border-radius: 7px;}
 
-.full-view-btn { background: linear-gradient(to bottom, #F39314, #FD9D20); color: #fff; padding: 10px 20px; border-radius: 5px; border: none; font-weight: 600; font-size: 16px; 
-  line-height: 23px; display: block; cursor: pointer; transition: 0.3s ease-in-out; width: 170px; margin-left: auto; margin-bottom: 25px; position: relative; overflow: hidden; text-align: center; }
-.full-view-btn .text { transition: transform 0.3s ease; display: inline-block; white-space: nowrap; }
-.full-view-btn span.icon { display: none; opacity: 0; transform: translateX(-5px); transition: 0.3s ease; color: #F39314; background: #fff; border-radius: 50%; padding: 0; font-size: 12px; width: 20px;height: 20px;text-align: center; }
-.full-view-btn span.icon i{position: relative; top: -1px;}
-.full-view-btn:hover .text { transform: translateX(-5px); }
-.full-view-btn:hover .icon { display: inline-block; opacity: 1; transform: translateX(0); }
+
+.full-view-btn {
+  background: linear-gradient(to bottom, #F39314, #FD9D20);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 23px;
+  display: block;
+  cursor: pointer;
+  transition: 1s ease-in-out;
+  width: 170px;
+  margin-left: auto;
+  margin-bottom: 25px;
+  position: relative; /* important for positioning icon */
+  overflow: hidden;
+  text-align: center;
+}
+
+.full-view-btn .text {
+  transition: transform 0.3s ease;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.full-view-btn span.icon {
+  position: absolute;
+  right: 15px; /* Adjust as needed */
+  top: 50%;
+  transform: translateY(-50%) translateX(10px); /* initially hidden right */
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  color: #F39314;
+  background: #fff;
+  border-radius: 50%;
+  font-size: 12px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.full-view-btn span.icon i {
+  position: relative;
+  top: -1px;
+}
+
+.full-view-btn:hover .text {
+  transform: translateX(-10px);
+}
+
+.full-view-btn:hover .icon {
+  transform: translateY(-50%) translateX(0);
+  opacity: 1;
+}
+
 
 .lifted-sub{position: relative; top: -22px; background: #FFF2E2; padding: 7px; border-radius: 5px; width: fit-content; line-height: 25px;}
 .script-lines{line-height: 36px;list-style: none;height: 385px;overflow-y: scroll;/*scrollbar-color: #F39314 #c2c9d2;  scrollbar-width: thin;*/}
