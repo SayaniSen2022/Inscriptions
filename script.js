@@ -5,7 +5,7 @@
     const $input = $overlay.find('input');
 
     // Show overlay on button click
-    $('.search-btn').on('click', function (e) {
+    $(document).on('click', '.search-btn', function (e) {
       e.stopPropagation();
       $overlay.addClass('active');
       setTimeout(() => {
@@ -14,24 +14,25 @@
     });
 
     // Close overlay on clicking the ✖ icon
-    $('#closeOverlay').on('click', function () {
+    $(document).on('click', '#closeOverlay',function () {
       $searchBox.css('transform', 'translateX(-400px)'); // Hide smoothly before removing overlay
         setTimeout(() => {
             $overlay.removeClass('active');
         }, 300); 
     });
 
-    // Prevent showing cursor by default — only when user clicks input
-    $input.on('focus', function () {
-      $(this).css('caret-color', 'auto');
-    }).on('blur', function () {
-      $(this).css('caret-color', 'transparent');
-    }).css('caret-color', 'transparent');
+    // Prevent showing cursor by default — only when user clicks input    
+      $(document).on('focus', '.custom-caret', function(){
+        $(this).css('caret-color', 'auto');
+      }).on('blur', '.custom-caret', function(){
+        $(this).css('caret-color', 'transparent');
+      });
+      $('.custom-caret').css('caret-color', 'transparent');
   });
 
   /****Navbar hamburger menu for mobile******/
 $(document).ready(function(){
-  $(".hamburger").click(function(){
+  $(document).on('click', ".hamburger", function(){
     $(this).toggleClass("is-active");
   });
 });
