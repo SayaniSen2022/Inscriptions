@@ -71,10 +71,10 @@ a{text-decoration: none;color: #000;}
 /*******************************Main Page Heading CSS Ends****************/
 
 /***************Page content CSS starts**********************/
-.text-container{padding: 1rem 12rem;display: flex;justify-content: center;gap: 1rem;transition: all 0.3s ease-in-out;}
+.text-container{padding: 1rem 12rem;display: flex;justify-content: center;gap: 2rem;transition: all 0.3s ease-in-out;}
 
 /****LEFT SIDE FILTERS****/
-.left{width: 17%;transition: width 0.3s ease-in-out;height: fit-content;padding: 15px;/*box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;*/border-radius: 10px;border: 1px solid rgba(243, 147, 20, 0.2);margin-top: 5.5rem;}
+.left{width: 17%;transition: width 0.3s ease-in-out;height: fit-content;padding: 15px;border-radius: 10px;border: 1px solid rgba(243, 147, 20, 0.2);margin-top: 5.1rem;}
 .filter-curtain { position: fixed; top: 0; left: -100%; height: 100vh; z-index: 999; transition: left 0.3s ease-in-out; background: #fff; }
 /* When curtain is open */
 .filter-curtain.open { left: 0; }
@@ -112,7 +112,7 @@ a{text-decoration: none;color: #000;}
 .search-container input::placeholder{color: #6D6A6A;font-size: 16px;font-weight: 400;line-height: 43.88px;}
 .search-icn{position: relative; right: 15px; top: 2px;}
 
-.article{border-radius: 10px;box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;padding: 35px 0 0;border: 1px solid rgba(243, 147, 20, 0.2);margin-bottom: 40px;}
+.article{border-radius: 10px;box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 8px;padding: 35px 0 0;border: 1px solid rgba(243, 147, 20, 0.2);margin-bottom: 40px;}
 .content-cont{padding: 0 35px;}
 .minitags{font-style: italic;color: #F39314;font-size: 15px;line-height: 22.5px;font-weight: 400;}
 .article-head{font-size: 28px;font-weight: 600;font-family: "Fraunces", serif;line-height: 45px;}
@@ -197,7 +197,8 @@ a{text-decoration: none;color: #000;}
 
 .article-2 .translation-box{margin-top: 45px;}
 /* .article-2 .more-content { height: 725px; overflow: hidden; } */
-.translation-box-original{display: none;}
+.translation-box-original{height: 0;transition: height 0.5s ease-in-out;visibility: hidden;}
+.translation-box-original.show-box{height: 680px;visibility: visible;}
 .original-script-box{padding: 35px;}
 .see-original-btn{margin-left: auto;margin-right: 0;display: block;border: none;border:none;outline: none;cursor: pointer;
   font-size: 18px;font-weight: 600;line-height: 45px;color: #F39314;background: #fff;text-decoration: underline;text-decoration-thickness: 2px;text-underline-offset: 12px;margin-bottom: 35px;}
@@ -311,9 +312,15 @@ a{text-decoration: none;color: #000;}
 
 .pg-end-btn{display: flex ; justify-content: space-between; align-items: center;}
 .back-btn{border: 1px solid #F39314;color: #F39314;outline: none;border-radius: 5px;background: #fff;width: 130px;text-align: center;font-weight: 600;font-size: 18px;line-height: 40px;cursor: pointer;}
+.bck-icn-img{width: 20px; height: 20px; transition: all 0.3s ease;position: relative; top: 4px;left: 0px;}
+.back-btn:hover .bck-icn-img{content: url('./images/back.webp');}
 .back-btn:hover{background: #F39314;color: #fff;transition: 0.3s;}
 
 .share-btn{border: 1px solid #FFF;color: #fff;outline: none;border-radius: 5px;background: #F39314;width: 130px;text-align: center;font-weight: 600;font-size: 18px;line-height: 40px;cursor: pointer}
+.icon-img{width: 16px; height: 16px; transition: all 0.3s ease;position: relative; top: 2px;left: 5px;}
+  .share-btn:hover .icon-img {
+  content: url('./images/share-yellow.webp');
+}
 .share-btn:hover{background: #FFF;color: #F39314;transition: 0.3s;border: 1px solid #F39314;}
 
 
@@ -383,7 +390,7 @@ a{text-decoration: none;color: #000;}
 }
 
 @media (max-width: 1440px){
-  .text-container{padding: 1rem 3rem;}
+  .text-container{padding: 1rem 4rem;}
   /* .nav-link-cont{gap: 8rem;;} */
   .nav-links{gap: 2rem;}
   .category-header{font-size: 17px;}  
@@ -447,6 +454,8 @@ a{text-decoration: none;color: #000;}
   .right.right-open { right: 0;visibility: visible;padding: 15px; }
   .right.right-open .index-close{display: block;}
   .right.visible { width: 50%; }
+  .full-view-btn{font-size: 14px;}
+  .full-view-btn span.icon i{ top: 0; }
 }
 
 @media (max-width: 700px){

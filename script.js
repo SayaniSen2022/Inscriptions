@@ -138,7 +138,7 @@ $(document).on('click', '.see-original-btn', function(){
   const $article = $(this).closest('.article-2');
    const $transOriginalBox = $article.find('.translation-box-original');
 
-   $transOriginalBox.show();
+   $transOriginalBox.addClass('show-box');
    $(this).fadeOut();
 });
 
