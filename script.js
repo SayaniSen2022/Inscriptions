@@ -166,13 +166,13 @@ $(document).on('click', '.see-original-btn', function(){
 
 
 /*************displays related links when a filter is selected*****************/
- $(".filter-name").click(function() {
-        if ($(".filter:checked").length > 0) {
-            $("#right-block").addClass('visible');            
-        } else {
-            $("#right-block").removeClass('visible');
-        }
-    });
+//  $(".filter-name").click(function() {
+//         if ($(".filter:checked").length > 0) {
+//             $("#right-block").addClass('visible');            
+//         } else {
+//             $("#right-block").removeClass('visible');
+//         }
+//     });
 
    if ($(window).width() > 768){
       $(".filter-name").click(function() {
@@ -185,7 +185,7 @@ $(document).on('click', '.see-original-btn', function(){
    }else{
     $(".filter-name").click(function() {
         if ($(".filter:checked").length > 0) {
-          $("#right-block").removeClass('visible');
+          // $("#right-block").removeClass('visible');
             $("#indexbtn").addClass('show');
         } else {
             $("#indexbtn").removeClass('show');
