@@ -489,7 +489,7 @@ a{text-decoration: none;color: #000;}
   .content-cont { padding: 0 20px; }
   .translation-box { padding: 10px;}
   .article-2 .translation-box { margin-top: 30px; }
-  .full-view-btn, .original-txt-btn { width: 130px;font-size: 14px;padding: 8px 20px; line-height: 19.44px;}
+  .full-view-btn, .original-txt-btn { width: 150px;font-size: 14px;padding: 8px 20px; line-height: 19.44px;}
   .home-bnr { margin-bottom: -180px; }
   .home-bnr-con { top: -180px; }
   .top-heading{font-size: 33px;margin: 30px 0 10px;}
@@ -530,7 +530,7 @@ a{text-decoration: none;color: #000;}
   .script-lines li{font-size: 14px;line-height: 26px;}
   .text-head{font-size: 14px; line-height: 20px;}
   .lang-btn-container{margin-top: 15px;}
- .full-view-btn, .original-txt-btn { width: 110px; padding: 8px; }
+ .full-view-btn, .original-txt-btn { width: 140px; padding: 8px; }
   .load-more { left: 39% ; }
 }
 
@@ -588,6 +588,8 @@ a{text-decoration: none;color: #000;}
   .roman-script{font-size: 16px;}
   .pg-end-cont { margin-left: 4rem; max-width: 641px; }
   .det-editor-comment{padding: 15px;}
+  .full-view-btn span.icon{right: 10px;}
+  .full-view-btn span.icon i{top: 0;}
 }
 
 @media (max-width: 900px){
@@ -624,7 +626,7 @@ a{text-decoration: none;color: #000;}
   .pg-det-content{flex-direction: column;padding: 0 2rem;gap: 2rem;}
   .det-left, .det-right{width: 100%;}
   .det-intro-head{font-size: 20px;text-align: center;}
-  .det-intro-details{text-align: center;}
+  .det-intro-details{text-align: center;padding-bottom: 0;}
   .vernacular { font-size: 16px; line-height: 30px; }
   .roman-script{line-height: 30px;}
   .org-btn.org-active{font-size: 20px;}
