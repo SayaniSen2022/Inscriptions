@@ -159,20 +159,23 @@ $(document).on('click', '.see-original-btn', function(){
 
 
 /**************language switch script********************/
+$(document).on('click', '.original-txt-btn:not(.roman-btn)', function () {
+    var translationBox = $(this).closest('.translation-box');
+    translationBox.find('.roman-btn').removeClass('active');
+    $(this).addClass('active');
+    translationBox.find('.roman-text').hide();
+    translationBox.find('.original-text').show();
+});
 
-  $('.roman-btn').on('click', function () {
-    $('.original-txt-btn').removeClass('active');
-    $(this).addClass('active');    
-    $('.roman-text').show();
-    $('.original-text').hide();
-  });
+$(document).on('click', '.roman-btn', function () {
+    var translationBox = $(this).closest('.translation-box'); 
+    translationBox.find('.original-txt-btn').removeClass('active');
+    $(this).addClass('active');
+    translationBox.find('.roman-text').show();
+    translationBox.find('.original-text').hide();
+});
 
-  $('.original-txt-btn:not(.roman-btn)').on('click', function () {
-    $('.roman-btn').removeClass('active');
-    $(this).addClass('active');    
-    $('.roman-text').hide();
-    $('.original-text').show();
-  });
+
 
 /**************language switch script ends****************/
 
@@ -303,7 +306,8 @@ $(document).ready(function() {
 
 
 /*********************Fixing the subheads as we scroll down*******************/
-    var height = $('.lang-btn-container-2').height();
+    var height = $('.test').height();
+    // var heightR = $('.det-roman-text').height();
     var height2 = $('.trans-text').height();
 
     // console.log($('.det-original-text').height());
@@ -314,22 +318,23 @@ $(document).ready(function() {
         if($(this).scrollTop() > height){
             $('.lang-btn-container-2').addClass('fixed');
         }
-        else{
+        else if(height < $(this).scrollTop() < height2){
             $('.lang-btn-container-2').removeClass('fixed');
+            $('.transliteration').addClass('fixed');
         }
     });
 
    
-    $(window).scroll(function(){
-        if($(this).scrollTop() > height2){
-            $('.lang-btn-container-2').removeClass('fixed');
-            $('.transliteration').addClass('fixed');
-        }
-        else{
-            $('.transliteration').removeClass('fixed');
-            $('.lang-btn-container-2').addClass('fixed');
-        }
-    });
+    // $(window).scroll(function(){
+    //     if($(this).scrollTop() > height2){
+    //         $('.lang-btn-container-2').removeClass('fixed');
+    //         $('.transliteration').addClass('fixed');
+    //     }
+    //     else{
+    //         $('.transliteration').removeClass('fixed');
+    //         $('.lang-btn-container-2').addClass('fixed');
+    //     }
+    // });
 
 
 /*************************Image Gallery Script**************************************/
