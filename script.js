@@ -73,9 +73,21 @@ $(document).ready(function(){
 /*************Filters Section starts ********/ 
 
   $(document).ready(function () {
+
+    var mobBtnSection = $('.mob-btn-section').height();
+
+    $(window).scroll(function(){
+        if($(this).scrollTop() > mobBtnSection){
+            $('.mob-btn-section').addClass('filter-fixed');
+        }
+        else{
+            $('.mob-btn-section').removeClass('filter-fixed');
+        }
+    });
+
     // Open filter curtain
     $('.filter-toggle-btn').on('click', function () {
-      $(this).fadeOut();
+      // $(this).fadeOut();
       // $('.index-btn').css('display', 'block');
       $('.left').addClass('open');
     });
@@ -196,7 +208,7 @@ $(document).on('click', '.see-original-btn', function(){
    $("#indexbtn").on('click', function(){
     $('.left').removeClass('open');
     $('.filter-toggle-btn').fadeIn();
-    $(this).fadeOut();
+    // $(this).fadeOut();
     $('.right').addClass('right-open');
    })
 
@@ -204,7 +216,7 @@ $(document).on('click', '.see-original-btn', function(){
   // Close filter curtain
   $('.index-close').on('click', function () {
     $('.right').removeClass('right-open');
-    $('#indexbtn').fadeIn();
+    // $('#indexbtn').fadeIn();
     // $('.filter').prop('checked', false);
   });
  
