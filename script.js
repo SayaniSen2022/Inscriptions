@@ -139,7 +139,7 @@ $(document).on('click', '.see-original-btn', function(){
    const $transOriginalBox = $article.find('.translation-box-original');
 
    $transOriginalBox.addClass('show-box');
-   $(this).fadeOut();
+   $(this).hide();
 });
 
 
@@ -185,7 +185,7 @@ $(document).on('click', '.see-original-btn', function(){
    }else{
     $(".filter-name").click(function() {
         if ($(".filter:checked").length > 0) {
-          // $("#right-block").removeClass('visible');
+          $("#right-block").removeClass('visible');
             $("#indexbtn").addClass('show');
         } else {
             $("#indexbtn").removeClass('show');
@@ -222,7 +222,7 @@ $(document).ready(function() {
     var page4Top = $("#article4").offset().top;
 
 
-    if ($('#right-block').is(":visible") && scrollPos >= page1Top && scrollPos < page2Top) {
+ if ($('#right-block').is(":visible") && scrollPos >= page1Top && scrollPos < page2Top) {
       $("#link1").addClass("link-active");
       $("#link2").removeClass("link-active");
       $("#link3").removeClass("link-active");
@@ -262,6 +262,15 @@ $(document).ready(function() {
 });
 /*******Link highlight with scroll section ends******/
 
+/******jump to section on link click, for mobiles******/
+$(document).ready(function() {
+    $(".related-links").click(function() {
+      let target = $(this).attr("data-target");
+        $('html, body').animate({
+            scrollTop: $("#" + target).offset().top
+        }, 2000);
+    });
+});
 
 /************************************************************************INDIVIDUAL SCRIPT PAGE*************************************************************************/
 
