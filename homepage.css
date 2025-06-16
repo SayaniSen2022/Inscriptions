@@ -222,7 +222,7 @@ a{text-decoration: none;color: #000;}
 
 .lang-btn-container{display: flex;justify-content: space-between;align-items: center;margin-bottom: 15px;}
 
-.original-txt-btn{background: linear-gradient(to bottom, #F39314, #FD9D20); color: #fff; padding: 10px 20px; border-radius: 5px; border: none; font-weight: 600; font-size: 16px; 
+.original-txt-btn{background: linear-gradient(to bottom, #F39314, #FD9D20); color: #fff; padding: 10px 20px; border-radius: 3px; border: none; font-weight: 600; font-size: 16px; 
   line-height: 23px;width: 170px;text-align: center;cursor: pointer;}
 
 .original-txt-btn.active{background: #FFF2E2;color: #F39314;}
@@ -484,7 +484,7 @@ a{text-decoration: none;color: #000;}
   .right.right-open { right: 0;visibility: visible;padding: 15px; }
   .right.right-open .index-close{display: block;}
   .right.visible { width: 50%; }
-  .full-view-btn{font-size: 14px;}
+  .full-view-btn{font-size: 14px;margin: 0 auto 25px;}
   .full-view-btn span.icon i{ top: 0; }
 }
 
@@ -506,6 +506,8 @@ a{text-decoration: none;color: #000;}
   .text-container { padding: 10px; }
   .content-cont { padding: 0 20px; }
   .translation-box { padding: 0px 10px;}
+  .article-2 .translation-box{padding: 20px 10px;}
+  .full-view-btn, .original-txt-btn { width: 130px;font-size: 14px;padding: 8px 20px; }
   .home-bnr { margin-bottom: -180px; }
   .home-bnr-con { top: -180px; }
   .top-heading{font-size: 33px;margin: 30px 0 10px;}
@@ -588,12 +590,19 @@ a{text-decoration: none;color: #000;}
 
 /*************Media Queries For Page Details****************/
 
+@media (max-width: 1850px){ .close{right: 36rem;} }
+@media (max-width: 1800px){ .close{right: 34rem;} }
+
+@media (max-width: 1750px){ .close{right: 33rem;} }
+
+@media (max-width: 1700px){ .close{right: 31rem;} }
+
 @media (max-width: 1650px){.pg-det-content{padding: 0 8rem;}
 .pg-end-cont{margin-left: 8rem;max-width: 1076px;}
 .img-cont img { width: 347px; height: 347px;}
-.close{right: 31rem;}
 .modal-content{width: 600px;height: 600px;}
 }
+@media (max-width: 1526px){ .close{right: 27rem;} }
 
 @media (max-width: 1440px){  
   .close{right: 26rem;}
@@ -601,6 +610,8 @@ a{text-decoration: none;color: #000;}
   .pg-end-cont{max-width: 909px;}
   .img-cont img { width: 292px; height: 292px; }
 }
+
+@media (max-width: 1360px){ .close{right: 24rem;} }
 
 @media (max-width: 1030px){
   .details-page-bnr { margin-bottom: -16rem; }
