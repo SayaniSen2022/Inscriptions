@@ -106,20 +106,6 @@ $(document).ready(function(){
       $options.slideToggle(); //sliding animation
       $icon.toggleClass('fa-angle-down fa-angle-up');
     });
-
-    //toggle more and less
-    $(".toggle-more").on("click", function () {
-        let parentSection = $(this).closest(".filter-options"); // Find the specific section
-
-        if (parentSection.find(".filters").hasClass("more-filters")) {
-            $(this).text("-Less");
-        } else {
-            $(this).text("+More");
-        }
-
-        parentSection.find(".filters").toggleClass("more-filters");
-    });
-
   });
 
 
