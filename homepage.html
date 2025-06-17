@@ -8,6 +8,52 @@
     <title>Home Page</title>
 </head>
 <body>
-    
+    <!--Header-->
+    <section class="hero">
+        <nav class="navbar">
+            <div class="nav-link-cont">
+                <h2 class="logo"><a href="#">LOGO</a></h2>
+                <!--Nav Links-->
+                <ul class="nav-links">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Pune Project</a></li>
+                    <li><a href="#">Journal</a></li>
+                    <li><a href="#">Contact Us</a></li>                
+                </ul>
+            </div>
+
+            <!--Right Side Icons--> 
+            <div class="nav-icons">
+                <button class="menu-toggle" type="button">
+                    <!-- <i class="fa-solid fa-bars"></i> -->                     
+                    <div class="hamburger" id="hamburger-6">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </div>
+                </button>
+                <button class="search-btn" type="button"><i class="fa-solid fa-magnifying-glass fa-lg"></i></button>
+            </div>           
+        </nav>
+    </section>
+    <!--Serach Overlay-->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-box">
+            <input name="search-site" class="custom-caret" type="text" placeholder="Search...">
+            <span class="close-btn" id="closeOverlay">&times;</span>
+        </div>
+    </div>
+    <!--Header End-->
+    <section class="home-bnr">
+        <div class="home-bnr-con">
+            <span>
+                <img src="./images/Temple-heroimg.webp" alt="home-bnr">
+            </span>
+        </div>
+    </section>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./script.js"></script>
 </body>
 </html>

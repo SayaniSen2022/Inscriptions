@@ -37,7 +37,7 @@
             </div>           
         </nav>
     </section>
-    <!--Serach Overlay-->
+    <!--Search Overlay-->
     <div class="search-overlay" id="searchOverlay">
         <div class="search-box">
             <input name="search-site" type="text" placeholder="Search...">
@@ -302,43 +302,94 @@
         </div>
     </section>
     <div class="pg-end-cont">
-    <section class="gallery">
-        <div class="gallery-head">View Inscription <span>Gallery</span></div>
-        <div class="img-cont">
-            <div class="gallery-image"><img src="./images/img1.webp" alt="img1"></div>
-            <div class="gallery-image"><img src="./images/img2.webp" alt="img2"></div>
-            <div class="gallery-image"><img src="./images/img3.webp" alt="img3"></div>
-            <div class="gallery-image"><img src="./images/img4.webp" alt="img4"></div>
-            <div class="gallery-image"><img src="./images/img5.webp" alt="img5"></div>
-            <div class="gallery-image"><img src="./images/img6.webp" alt="img6"></div>
-        </div> 
-        <!-- Modal for zoomed image -->
-        <div id="imageModal" class="modal">                 
-            <div class="modal-content-container">
-                <span class="close"><i class="fa-solid fa-x"></i></span>
-                <img class="modal-content" id="zoomedImage">
-            </div>                   
-        </div>       
-    </section>
-    <section class="pg-end-btn">
-        <button class="back-btn">
-            <span class="bck-icn">
-                <!-- <i class="fa-solid fa-arrow-left"></i> -->
-                    <img src="./images/back-ylw.webp" alt="bck-arrow" class="bck-icn-img">
-            </span>
-            Go Back</button>
-        <button class="share-btn">Share 
-            <span class="share-icn">
-                <!-- <i class="fa-solid fa-share-nodes"></i> -->
-                    <img src="./images/share-outline.webp" alt="share icon" class="icon-img">
-            </span>
-        </button>
-    </section>
-    </div>      
-
-    
+        <section class="gallery">
+            <div class="gallery-head">View Inscription <span>Gallery</span></div>
+            <div class="img-cont">
+                <div class="gallery-image"><img src="./images/img1.webp" alt="img1"></div>
+                <div class="gallery-image"><img src="./images/img2.webp" alt="img2"></div>
+                <div class="gallery-image"><img src="./images/img3.webp" alt="img3"></div>
+                <div class="gallery-image"><img src="./images/img4.webp" alt="img4"></div>
+                <div class="gallery-image"><img src="./images/img5.webp" alt="img5"></div>
+                <div class="gallery-image"><img src="./images/img6.webp" alt="img6"></div>
+            </div> 
+            <!-- Modal for zoomed image -->
+            <div id="imageModal" class="modal">                 
+                <div class="modal-content-container">
+                    <span class="close"><i class="fa-solid fa-x"></i></span>
+                    <img class="modal-content" id="zoomedImage">
+                </div>                   
+            </div>       
+        </section>
+        <section class="pg-end-btn">
+            <a href="./inscriptions.html">
+                <button class="back-btn">
+                    <span class="bck-icn"><img src="./images/back-ylw.webp" alt="bck-arrow" class="bck-icn-img"></span>
+                    Go Back
+                </button>
+            </a>
+            <a href="#">
+                <button class="share-btn">Share 
+                    <span class="share-icn"><img src="./images/share-outline.webp" alt="share icon" class="icon-img"></span>
+                </button>
+            </a>
+        </section>
+    </div>    
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./script.js"></script>
+
+    <script>
+        /************************************************************************INDIVIDUAL SCRIPT PAGE*************************************************************************/
+
+        /**************language switch script for page-details****************/
+        $('.rom-btn').on('click', function () {
+            $('.org-btn').removeClass('org-active');
+            $(this).addClass('org-active');    
+            $('.det-roman-text').show();
+            $('.det-original-text').hide();
+        });
+        
+        $('.org-btn:not(.rom-btn)').on('click', function () {
+            $('.rom-btn').removeClass('org-active');
+            $(this).addClass('org-active');    
+            $('.det-roman-text').hide();
+            $('.det-original-text').show();
+        });
+
+
+        /*********************Fixing the subheads as we scroll down*******************/
+            var height = $('.test').height();
+            var height2 = $('.trans-text').height();
+
+
+            $(window).scroll(function(){
+                if($(this).scrollTop() > height){
+                    $('.lang-btn-container-2').addClass('fixed');
+                }
+                else if(height < $(this).scrollTop() < height2){
+                    $('.lang-btn-container-2').removeClass('fixed');
+                    $('.transliteration').addClass('fixed');
+                }
+            });
+
+
+        /*************************Image Gallery Script**************************************/
+        $(document).ready(function() {
+            $(".gallery-image img").click(function() {
+                $("#zoomedImage").attr("src", $(this).attr("src"));
+                $("#imageModal").fadeIn();
+            });
+
+            $(".close").click(function() {
+                $("#imageModal").fadeOut();
+            });
+
+            $("#imageModal").click(function(e) {
+                if ($(e.target).is("#imageModal")) {
+                    $("#imageModal").fadeOut();
+                }
+            });
+        }); 
+    </script>
 </body>
 </html>
