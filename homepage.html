@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./inscriptions.css">
     <title>Home Page</title>
 </head>
@@ -50,10 +51,10 @@
         <div class="bnr-con">
             <span> <img src="./images/Temple-heroimg.webp"> </span>
 
-            <div class="bnr-txt v-align">
-                <p class="sb-hdng">Mapping, Documenting &amp; Conserving</p>
-                <h1 class="hdng">The Heritage Temples of India</h1>
-                <div class="bnr-btn"> <a href="#">Explore</a> </div>
+            <div class="bnr-txt v-align aos-init aos-animate" >
+                <p class="sb-hdng" data-aos="zoom-in" data-aos-duration="1000" data-aos-once="true">Mapping, Documenting &amp; Conserving</p>
+                <h1 class="hdng" data-aos="zoom-in" data-aos-duration="1000" data-aos-once="true">The Heritage Temples of India</h1>
+                <div class="bnr-btn" data-aos="zoom-in" data-aos-duration="1000" data-aos-once="true"> <a href="#">Explore</a> </div>
             </div>
         </div>
     </section>
@@ -64,7 +65,7 @@
                 <div>
                     <div class="abt-img"><img src="./images/about.webp" alt="about"></div>
                 </div>
-                <div style="position: relative;overflow: hidden;">
+                <div style="position: relative;overflow: hidden;" data-aos="fade-left" data-aos-easing="ease-in-out" data-aos-offset="200" data-aos-duration="1000">
                     <div class="abt-txt">
                         <p class="abt-sub abt-sub-hide">About Us</p>
                         <div class="brdr abt-sub-hide">
@@ -90,7 +91,7 @@
         </div>
     </section>
     <section class="feature" style="overflow-x: hidden;">
-        <div class="container">
+        <div class="container aos-init aos-animate" data-aos="fade-right" data-aos-easing="ease-in-out" data-aos-offset="200" data-aos-duration="1000">
             <div class="brdr v-align">
                 <div>
                     <h2 class="abt-hdng v-align"> Featured Temples of Pune </h2>  
@@ -196,53 +197,55 @@
  
     </section>
     <section class="journal" style="overflow-x: hidden;">
-        <div class="container">
-            <p class="abt-sub v-align">Journal</p>
-            <div class="brdr v-align m-t-1">
-                <div> <h2 class="abt-hdng v-align"> Exploring Our Temple Heritage </h2> </div>
-                <div class="brdr-btm-1"> </div>
-            </div>
-            <div class="j-box-row m-t-2">            
-                <div class="j-box">
-                    <a href="#">
-                        <span>
-                        <img src="./images/temple7.webp">
-                        </span>
-                    </a>
-                    <p class="j-hdng">
-                    <a href="#">
-                    Images of Natha yogis  and Siddhas on the Someshvar temple at Pimpri-Dumala
-                    </a>
-                    </p>
-                    <p class="date">Vijay Sarde </p>
-                    <div class="j-para"><p>Images depicted on the 13th-14th century Someśvara temple show an association with the Nātha Sa...</p></div>
-                    <a href="#" class="rd-mr"> Read More <i class="fa-solid fa-angle-right"></i></a>
+        <div class="aos-init aos-animate" data-aos="fade-left" data-aos-easing="ease-in-out" data-aos-offset="200" data-aos-duration="1000">
+            <div class="container">
+                <p class="abt-sub v-align">Journal</p>
+                <div class="brdr v-align m-t-1">
+                    <div> <h2 class="abt-hdng v-align"> Exploring Our Temple Heritage </h2> </div>
+                    <div class="brdr-btm-1"> </div>
                 </div>
-                <div class="j-box">
-                    <a href="#">
-                        <span>
-                        <img src="./images/temple8.webp">
-                        </span>
-                    </a>
-                    <p class="j-hdng"> <a href="#"> Preservation of a 300 year old Maratha Temple by Tattva Heritage Foundation </a> </p>
-                    <p class="date">Manish Maheshwari</p>
-                    <div class="j-para"><p>After an interlude of about 500 years, the temple-building activity in Maharashtra began in right...</p></div>
-                    <a href="#" class="rd-mr"> Read More <i class="fa-solid fa-angle-right"></i></a>
+                <div class="j-box-row m-t-2">            
+                    <div class="j-box">
+                        <a href="#">
+                            <span>
+                            <img src="./images/temple7.webp">
+                            </span>
+                        </a>
+                        <p class="j-hdng">
+                        <a href="#">
+                        Images of Natha yogis  and Siddhas on the Someshvar temple at Pimpri-Dumala
+                        </a>
+                        </p>
+                        <p class="date">Vijay Sarde </p>
+                        <div class="j-para"><p>Images depicted on the 13th-14th century Someśvara temple show an association with the Nātha Sa...</p></div>
+                        <a href="#" class="rd-mr"> Read More <i class="fa-solid fa-angle-right"></i></a>
+                    </div>
+                    <div class="j-box">
+                        <a href="#">
+                            <span>
+                            <img src="./images/temple8.webp">
+                            </span>
+                        </a>
+                        <p class="j-hdng"> <a href="#"> Preservation of a 300 year old Maratha Temple by Tattva Heritage Foundation </a> </p>
+                        <p class="date">Manish Maheshwari</p>
+                        <div class="j-para"><p>After an interlude of about 500 years, the temple-building activity in Maharashtra began in right...</p></div>
+                        <a href="#" class="rd-mr"> Read More <i class="fa-solid fa-angle-right"></i></a>
+                    </div>
+                    <div class="j-box">
+                        <a href="#">
+                            <span>
+                            <img src="./images/temple9.webp">
+                            </span>
+                        </a>
+                        <p class="j-hdng"> <a href="#"> The Gurav Temple Priests of Maharashtra </a> </p>
+                        <p class="date">Manish Maheshwari</p>
+                        <div class="j-para"><p>During our innumerable field visits to the various temples of Maharashtra, we make it a point to ...</p></div>
+                        <a href="#" class="rd-mr"> Read More <i class="fa-solid fa-angle-right"></i></a>
+                    </div>
                 </div>
-                <div class="j-box">
-                    <a href="#">
-                        <span>
-                        <img src="./images/temple9.webp">
-                        </span>
-                    </a>
-                    <p class="j-hdng"> <a href="#"> The Gurav Temple Priests of Maharashtra </a> </p>
-                    <p class="date">Manish Maheshwari</p>
-                    <div class="j-para"><p>During our innumerable field visits to the various temples of Maharashtra, we make it a point to ...</p></div>
-                    <a href="#" class="rd-mr"> Read More <i class="fa-solid fa-angle-right"></i></a>
+                <div class="abt-btn jr-home-btn v-align m-t-4">
+                    <a href="https://heritagetemples.org/journal">See All</a>
                 </div>
-            </div>
-            <div class="abt-btn jr-home-btn v-align m-t-4">
-                <a href="https://heritagetemples.org/journal">See All</a>
             </div>
         </div>
     </section>
@@ -306,6 +309,11 @@
   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script> 
+        AOS.init(); 
+        AOS.refresh();
+    </script>
     
 </body>
 </html>
