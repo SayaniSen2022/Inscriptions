@@ -10,7 +10,7 @@
 <body>
     <!--Header-->
     <section class="hero">
-        <nav class="navbar fixed-top">
+        <nav class="navbar">
             <div class="nav-link-cont">
                 <h2 class="logo"><a href="#">LOGO</a></h2>
                 <!--Nav Links-->
@@ -49,7 +49,7 @@
     <section class="ins-bnr">
         <div class="ins-bnr-con">
             <span>
-                <img src="./images/home-bnr.webp" alt="ins-bnr">
+                <img src="./images/home-bnr.webp" alt="ins-bnr" height="720" width="1280">
             </span>
         </div>
     </section>
@@ -715,9 +715,9 @@
         /*******Link highlight with scroll section ends******/
 
         /******jump to section on link click, for mobiles******/
-        $(document).ready(function() {
-            $(".related-links").click(function() {
-            let target = $(this).attr("data-target");
+        $(document).ready(function () {
+            $(document).on("click", ".related-links", function () {
+                let target = $(this).attr("data-target");
                 $('html, body').animate({
                     scrollTop: $("#" + target).offset().top
                 }, 2000);
