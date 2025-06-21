@@ -12,7 +12,7 @@
     <section class="hero">
         <nav class="navbar">
             <div class="nav-link-cont">
-                <h2 class="logo"><a href="#">LOGO</a></h2>
+                <h2 class="logo"><a href="./homepage.html">LOGO</a></h2>
                 <!--Nav Links-->
                 <ul class="nav-links">
                     <li><a href="./homepage.html">Home</a></li>
@@ -556,6 +556,17 @@
         /*************Filters Section starts ********/ 
 
         $(document).ready(function () {
+            // Toggle filter section
+            $('.category-header').on('click', function () {
+            const $icon = $(this).find('.toggle-icon');
+            const $options = $(this).next('.filter-options');
+
+            $options.slideToggle(); //sliding animation
+            $icon.toggleClass('fa-angle-down fa-angle-up');
+            });
+        });
+
+        $(document).ready(function () {
 
             var mobBtnSection = $('.mob-btn-section').height();
 
@@ -580,15 +591,7 @@
             $('.left').removeClass('open');
             $('.filter-toggle-btn').fadeIn();
             });
-
-            // Toggle filter section
-            $('.category-header').on('click', function () {
-            const $icon = $(this).find('.toggle-icon');
-            const $options = $(this).next('.filter-options');
-
-            $options.slideToggle(); //sliding animation
-            $icon.toggleClass('fa-angle-down fa-angle-up');
-            });
+           
         });
 
         /************Filters Section Ends**************/

@@ -456,6 +456,8 @@ p { margin-top: 0; margin-bottom: 1rem; }
   .article-head{font-size: 26px;}
   .tag-list ul li{font-size: 15px;}
   .pune-bnr-txt { left: 14% ; }
+  .det-left{width: 75%;}
+  .det-right{width: 25%;}
   .pg-end-cont { max-width: 800px;}
   .img-cont img { width: 255px; height: 255px; }
 }
@@ -464,8 +466,13 @@ p { margin-top: 0; margin-bottom: 1rem; }
   .pune-bnr-txt { left: 11% ;}
   .sb-hdng { font-size: 18px; }
   .hdng { font-size: 35px; }
-   .pg-end-cont { max-width: 772px;}
+  .pg-end-cont { max-width: 772px;}
   .img-cont img { width: 246px; height: 246px; }
+}
+
+@media (max-width: 1240px){
+  .pg-end-cont { max-width: 740px;}
+  .img-cont img { width: 236px; height: 236px; }
 }
 
 @media (max-width: 1200px){
