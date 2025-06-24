@@ -116,7 +116,7 @@ a{text-decoration: none;color: #000;}
 .article-head{font-size: 25px;font-weight: 600;line-height: 45px;}
 .tag-list{border-bottom: 1px solid #dddddd;padding: 5px 0 15px;margin-bottom: 10px;}
 .tag-list ul{display: flex;list-style: none;justify-content: flex-start;gap: 10px;}
-.tag-list ul li{font-size: 17px;font-style: italic;color: #2b2b2b;border-right: 1px solid #dddddd;padding: 0 10px 0 0;font-weight: 400;line-height: 22.5px;}
+.tag-list ul li{font-size: 14px;font-style: italic;color: #2b2b2b;border-right: 1px solid #dddddd;padding: 0 10px 0 0;font-weight: 400;line-height: 22.5px;}
 .tag-list ul li:last-child{border-right: none;}
 .tag-list ul li a{color: #2b2b2b;}
 .subhead{font-size: 18px;line-height: 45px;font-weight: 600;color: #F09216;}
@@ -188,7 +188,7 @@ a{text-decoration: none;color: #000;}
 .det-top-heading{text-align: center;font-size: 45px;font-weight: 500;margin-top: 55px;padding: 0 22px;}
 .details-tag-list{padding: 15px;margin-bottom: 35px;}
 .details-tag-list ul{display: flex;list-style: none;justify-content: center;gap: 10px;flex-wrap: wrap;}
-.details-tag-list ul li{font-size: 17px;font-style: italic;color: #2b2b2b;border-right: 1px solid #dddddd;padding: 0 10px 0 0;font-weight: 400;line-height: 22.5px;}
+.details-tag-list ul li{font-size: 14px;font-style: italic;color: #2b2b2b;border-right: 1px solid #dddddd;padding: 0 10px 0 0;font-weight: 400;line-height: 22.5px;}
 .details-tag-list ul li:last-child{border-right: none;}
 .details-tag-list ul li a{color: #2b2b2b;}
 .pg-det-content{display: flex;justify-content: center;align-items: flex-start;gap: 3rem;/*padding: 0 22rem;*/}
@@ -421,7 +421,6 @@ a{text-decoration: none;color: #000;}
   .toggle-more{font-size: 14px;}
   .right-heading{font-size: 19.42px;}
   .related-links a{font-size: 15px;}
-  .tag-list ul li{font-size: 16px;}
   .img-cont img { width: 257px; height: 257px;}
   .j-para{height: 70px;}
 }
@@ -441,14 +440,12 @@ a{text-decoration: none;color: #000;}
 }
 @media (max-width: 1400px){
   .j-hdng{font-size: 16px;}
-  .date{font-size: 15px;}
   .j-para{font-size: 14px;line-height: 24px;}
 }
 
 @media (max-width: 1300px){
   .text-container { padding: 1rem; }
   .article-head{font-size: 26px;}
-  .tag-list ul li{font-size: 15px;}
   .pune-bnr-txt { left: 14% ; }
   /* .det-left{width: 75%;} */
   /* .det-right{width: 25%;} */
@@ -586,13 +583,13 @@ a{text-decoration: none;color: #000;}
   .right.visible { width: 50%; }
   .full-view-btn{font-size: 14px;margin: 0 auto 25px;}
   .full-view-btn span.icon i{ top: 0; }
-  .tag-list ul li { font-size: 17px;padding: 0 7px 0 0;}
+  .tag-list ul li { font-size: 14px;padding: 0 7px 0 0;}
   .pg-det-content { /*padding: 0 4rem;*/ flex-direction: column;}
   .det-right, .det-left { width: 100%; }
   .pg-end-cont{width: 100%;}
   .img-cont img { width: 208px; height: 208px; }
   .pune-bnr-txt { left: 16%; }  
-  .det-original-text li, .det-roman-text li, .trans-text li, .script-lines li{    font-size: 15px; line-height: 25px;}
+  .det-original-text li, .det-roman-text li, .trans-text li, .script-lines li{font-size: 16px; line-height: 30px;}
 }
 
 @media (max-width: 767px){
@@ -622,7 +619,6 @@ a{text-decoration: none;color: #000;}
   /* .ins-bnr{margin-bottom: -29%;} */
   /* .ins-bnr-con{top: -11.5rem;} */
   .top-heading{margin-top: 40px;}
-  .tag-list ul li { font-size: 15px; }
   .pune-bnr-txt { position: absolute; top: 42%; }
   .hdng { line-height: 35px; }
   .img-cont img { width: 151px; height: 151px; }
@@ -752,7 +748,7 @@ a{text-decoration: none;color: #000;}
   .filter-options label { font-size: 16px; }
   .tags{padding: 0 10px;}
   .tags a{line-height: 30px;font-size: 15px;}
-  .tag-list ul li{font-size: 14x;line-height: 12.5px;}
+  .tag-list ul li{line-height: 12.5px;}
   .content-cont{padding: 0 15px;}
   .article{padding-top: 15px;}
   .article-head { font-size: 20px; line-height: 24px;}
@@ -766,11 +762,11 @@ a{text-decoration: none;color: #000;}
   .det-top-heading { font-size: 28.23px; line-height: 40px; }
   /* .pg-det-content{padding: 0 1rem;} */
   .det-intro-details{font-size: 14px;}
-  .vernacular, .roman-script { font-size: 14px; line-height: 20px; }
+  .vernacular, .roman-script { font-size: 16px; line-height: 30px; }
   .img-cont img { width: 119px; height: 119px; }
   .back-btn, .share-btn{width: 100px;font-size: 15px;line-height: 35px;}
   .modal-content { width: 335px; height: 335px; }
-  .details-tag-list ul li{font-size: 15px;line-height: 17.5px;}
+  .details-tag-list ul li{line-height: 17.5px;}
   .pune-bnr-txt { left: 3%; }
   .ftr-bx img { width: 220px; }
   .abou-para { font-size: 15px;line-height: 24px; }
