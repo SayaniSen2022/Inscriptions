@@ -15,7 +15,7 @@
                 <div class="logo"><a href="./homepage.html">LOGO</a></div>
                 <!--Nav Links-->
                 <ul class="nav-links">
-                    <li><a href="./homepage.html">Home</a></li>
+                    <li class="nav-active"><a href="./homepage.html">Home</a></li>
                     <li><a href="./about-pg.html">About Us</a></li>
                     <li><a href="./inscriptions.html">Inscriptions</a></li>                   
                     <li><a href="./contac_us.html">Contact Us</a></li>                
@@ -32,7 +32,7 @@
                         <span class="line"></span>
                     </div>
                 </button>
-                <button class="search-btn" type="button"><i class="fa-solid fa-magnifying-glass fa-lg"></i></button>
+                <button class="search-btn" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>           
         </nav>
     </section>
@@ -74,7 +74,7 @@
             <div class="filter-category">
                 <div class="category-header">
                     <span>Significance</span>
-                    <i class="fa-solid fa-angle-down fa-sm toggle-icon"></i>
+                    <!-- <i class="fa-solid fa-angle-down fa-sm toggle-icon"></i> -->
                 </div>
                 <div class="filter-options">
                     <div class="filters">
@@ -92,7 +92,7 @@
             <div class="filter-category">
                 <div class="category-header">
                     <span>Date Range</span>
-                    <i class="fa-solid fa-angle-down fa-sm toggle-icon"></i>
+                    <!-- <i class="fa-solid fa-angle-down fa-sm toggle-icon"></i> -->
                 </div>
                 <div class="filter-options">
                     <div class="filters">
@@ -107,7 +107,7 @@
             <div class="filter-category">
                 <div class="category-header">
                     <span>Dynasty</span>
-                    <i class="fa-solid fa-angle-down fa-sm toggle-icon"></i>
+                    <!-- <i class="fa-solid fa-angle-down fa-sm toggle-icon"></i> -->
                 </div>
                 <div class="filter-options">
                     <div class="filters" >
@@ -122,7 +122,7 @@
             <div class="filter-category">
                 <div class="category-header">
                     <span>Language</span>
-                    <i class="fa-solid fa-angle-down fa-sm toggle-icon"></i>
+                    <!-- <i class="fa-solid fa-angle-down fa-sm toggle-icon"></i> -->
                 </div>
                 <div class="filter-options">
                     <div class="filters">
@@ -137,7 +137,7 @@
             <div class="filter-category">
                 <div class="category-header">
                     <span>Material Type</span>
-                    <i class="fa-solid fa-angle-down fa-sm toggle-icon"></i>
+                    <!-- <i class="fa-solid fa-angle-down fa-sm toggle-icon"></i> -->
                 </div>
                 <div class="filter-options">
                     <div class="filters">
@@ -152,7 +152,7 @@
             <div class="filter-category">
                 <div class="category-header">
                     <span>Inscription Type</span>
-                    <i class="fa-solid fa-angle-down fa-sm toggle-icon"></i>
+                    <!-- <i class="fa-solid fa-angle-down fa-sm toggle-icon"></i> -->
                 </div>
                 <div class="filter-options">
                     <div class="filters">
@@ -167,7 +167,7 @@
             <div class="filter-category">
                 <div class="category-header">
                     <span>Search By Tag</span>
-                    <i class="fa-solid fa-angle-down fa-sm toggle-icon"></i>
+                    <!-- <i class="fa-solid fa-angle-down fa-sm toggle-icon"></i> -->
                 </div>
                 <div class="filter-options search-tags">
                     <div class="tags-container">
@@ -555,16 +555,16 @@
     <script>
         /*************Filters Section starts ********/ 
 
-        $(document).ready(function () {
-            // Toggle filter section
-            $('.category-header').on('click', function () {
-            const $icon = $(this).find('.toggle-icon');
-            const $options = $(this).next('.filter-options');
+        // $(document).ready(function () {
+        //     // Toggle filter section
+        //     $('.category-header').on('click', function () {
+        //     const $icon = $(this).find('.toggle-icon');
+        //     const $options = $(this).next('.filter-options');
 
-            $options.slideToggle(); //sliding animation
-            $icon.toggleClass('fa-angle-down fa-angle-up');
-            });
-        });
+        //     $options.slideToggle(); //sliding animation
+        //     $icon.toggleClass('fa-angle-down fa-angle-up');
+        //     });
+        // });
 
         $(document).ready(function () {
 
