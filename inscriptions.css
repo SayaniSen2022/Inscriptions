@@ -107,7 +107,7 @@ a{text-decoration: none;color: #000;}
 /****Inscription Search Bar****/
 .search-container{display: flex;justify-content: space-between;border: 1px solid #dddddd;border-radius: 7px;margin-bottom: 41px;align-items: center;padding: 0 10px;background: #fafafa;}
 .search-box-inscription{position: relative;width: 100%;}
-.search-container input{background: #fafafa;border: none;outline: none;padding: 0 20px;text-align: left;color: #6D6A6A;font-size: 16px;font-weight: 400;line-height: 38px;width: 100%;}
+.search-container input{background: #fafafa;border: none;outline: none;padding: 5px 20px;text-align: left;color: #6D6A6A;font-size: 16px;font-weight: 400;line-height: 38px;width: 100%;}
 .search-container input::placeholder{color: #6D6A6A;font-size: 16px;font-weight: 400;line-height: 43.88px;}
 .search-icn{position: relative; right: 15px; top: 2px;}
 .article{border-radius: 10px;box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 8px;padding: 35px 0 0;border: 1px solid rgba(243, 147, 20, 0.2);margin-bottom: 40px;}
@@ -304,7 +304,7 @@ p { margin-top: 0; margin-bottom: 1rem; }
 .row{display: flex;flex-wrap: wrap;    justify-content: center; gap: 20px;}
 .item-f{width: 100%;}
 .f-con { margin-top: 40px !important; }
-.f-box { width: 98%; margin-bottom: 10px; overflow: hidden; border-radius: 4px; position: relative; height: 230px; }
+.f-box { width: 100%; margin-bottom: 10px; overflow: hidden; border-radius: 4px; position: relative; height: 230px; }
 .f-box img { height: 100%; object-fit: cover; width: 100%; }
 .overlay { position: absolute; bottom: 0%; left: 0%; width: 100%; height: 15%; background-image: linear-gradient(180deg, #382D2AB8 0%, #382D2AB8 100%); }
 .overlay p { color: #FFF;  font-size: 18px; font-weight: 400; line-height: 20px; text-align: center; margin-top: 8px; }
@@ -456,6 +456,8 @@ p { margin-top: 0; margin-bottom: 1rem; }
   .article-head{font-size: 26px;}
   .tag-list ul li{font-size: 15px;}
   .pune-bnr-txt { left: 14% ; }
+  .det-left{width: 75%;}
+  .det-right{width: 25%;}
   .pg-end-cont { max-width: 800px;}
   .img-cont img { width: 255px; height: 255px; }
 }
@@ -464,8 +466,13 @@ p { margin-top: 0; margin-bottom: 1rem; }
   .pune-bnr-txt { left: 11% ;}
   .sb-hdng { font-size: 18px; }
   .hdng { font-size: 35px; }
-   .pg-end-cont { max-width: 772px;}
+  .pg-end-cont { max-width: 772px;}
   .img-cont img { width: 246px; height: 246px; }
+}
+
+@media (max-width: 1240px){
+  .pg-end-cont { max-width: 740px;}
+  .img-cont img { width: 236px; height: 236px; }
 }
 
 @media (max-width: 1200px){

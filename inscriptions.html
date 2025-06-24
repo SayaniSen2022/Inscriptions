@@ -12,7 +12,7 @@
     <section class="hero">
         <nav class="navbar">
             <div class="nav-link-cont">
-                <h2 class="logo"><a href="#">LOGO</a></h2>
+                <div class="logo"><a href="./homepage.html">LOGO</a></div>
                 <!--Nav Links-->
                 <ul class="nav-links">
                     <li><a href="./homepage.html">Home</a></li>
@@ -53,7 +53,7 @@
         </div>
     </section>
     <section>
-        <div class="top-heading">View List of <span>Inscriptions</span></div>
+        <h1 class="top-heading">View List of <span>Inscriptions</span></h1>
         <p class="top-subhead">Explore detailed information and insights about the selected inscription</p>
         <!-- <div class="search-container">
             <input type="text" placeholder="Search Inscriptions...">
@@ -189,7 +189,7 @@
             <div class="article" id="article1">
                 <div class="content-cont">
                     <div class="minitags">Major</div>
-                    <div class="article-head">Spurious Kapileswar Stone plaque Inscription</div>
+                    <h2 class="article-head">Spurious Kapileswar Stone plaque Inscription</h2>
                     <div class="tag-list">
                         <ul>
                             <li><a href="#">Ashoka's</a></li>
@@ -247,7 +247,7 @@
             <div class="article article-2" id="article2">
                 <div class="content-cont more-content">
                     <div class="minitags">Major</div>
-                    <div class="article-head">Copper-plate charter of Budhagupta</div>
+                    <h2 class="article-head">Copper-plate charter of Budhagupta</h2>
                     <div class="tag-list">
                         <ul>
                             <li><a href="#">Maurya’s</a></li>
@@ -352,7 +352,7 @@
             <div class="article" id="article3">
                 <div class="content-cont">
                     <div class="minitags">Minor</div>
-                    <div class="article-head">Sohgaura copper plate inscription</div>
+                    <h2 class="article-head">Sohgaura copper plate inscription</h2>
                     <div class="tag-list">
                         <ul>
                             <li><a href="#">Gupta's</a></li>
@@ -409,7 +409,7 @@
             <div class="article article-2" id="article4">
                 <div class="content-cont more-content">
                     <div class="minitags">Major</div>
-                    <div class="article-head">Copper-plate charter of Budhagupta II</div>
+                    <h2 class="article-head">Copper-plate charter of Budhagupta II</h2>
                     <div class="tag-list">
                         <ul>
                             <li><a href="#">Maurya’s</a></li>
@@ -556,6 +556,17 @@
         /*************Filters Section starts ********/ 
 
         $(document).ready(function () {
+            // Toggle filter section
+            $('.category-header').on('click', function () {
+            const $icon = $(this).find('.toggle-icon');
+            const $options = $(this).next('.filter-options');
+
+            $options.slideToggle(); //sliding animation
+            $icon.toggleClass('fa-angle-down fa-angle-up');
+            });
+        });
+
+        $(document).ready(function () {
 
             var mobBtnSection = $('.mob-btn-section').height();
 
@@ -580,15 +591,7 @@
             $('.left').removeClass('open');
             $('.filter-toggle-btn').fadeIn();
             });
-
-            // Toggle filter section
-            $('.category-header').on('click', function () {
-            const $icon = $(this).find('.toggle-icon');
-            const $options = $(this).next('.filter-options');
-
-            $options.slideToggle(); //sliding animation
-            $icon.toggleClass('fa-angle-down fa-angle-up');
-            });
+           
         });
 
         /************Filters Section Ends**************/
