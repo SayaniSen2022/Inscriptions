@@ -18,7 +18,7 @@
                     <li class="nav-active"><a href="./homepage.html">Home</a></li>
                     <li><a href="./about-pg.html">About Us</a></li>
                     <li><a href="./inscriptions.html">Inscriptions</a></li>                   
-                    <li><a href="./contac_us.html">Contact Us</a></li>                
+                    <li><a href="./contact_us.html">Contact Us</a></li>                
                 </ul>
             </div>
 
@@ -52,7 +52,7 @@
             </span>
         </div>
     </section>
-    <section>
+    <section class="headings">
         <h1 class="top-heading">View List of <span>Inscriptions</span></h1>
         <p class="top-subhead">Explore detailed information and insights about the selected inscription</p>
         <!-- <div class="search-container">
@@ -568,7 +568,8 @@
 
         $(document).ready(function () {
 
-            var mobBtnSection = $('.mob-btn-section').height();
+            var mobBtnSection = $('.ins-bnr').height() + $('.headings').height() + $('.mob-btn-section').height();
+            console.log(mobBtnSection);
 
             $(window).scroll(function(){
                 if($(this).scrollTop() > mobBtnSection){
