@@ -526,6 +526,34 @@ a{text-decoration: none;color: #000;}
 }
 
 @media (max-width: 991px){
+  .middle{width: 100%;}
+  .search-container{margin-bottom: 5.5rem;}
+  .navbar{justify-content: space-between;padding: 0 4%;}
+  .nav-links { position: absolute; top: 53px; right: 0; background: #fff; flex-direction: column; width: 100%; display: none; padding: 0px; text-align: left; }
+  .nav-links li a{color: #000 !important;padding: 10px 20px;line-height: 40px;font-size: 14px;}
+  .nav-links li a:hover{color: var(--maincolor) !important;transition: 0.3s;}
+  .nav-links li.nav-active { display: block; background-color: var(--maincolor);}
+  .nav-links li.nav-active a{color: #fff !important;}
+  .menu-toggle { display: inline-block; }
+  .mob-btn-section{display: flex;}
+  .filter-toggle-btn{display: block;}
+  .left { position: fixed; top: -93px; left: -100%; height: 100%; overflow-y: scroll; z-index: 9999; transition: left 0.3s ease-in-out; width: 55%; max-width: 300px; background: #fff; border-radius: 0; } 
+  .left.open { left: 0; }
+  .left.open .close-filter { display: block; }
+  .left.open ~ .filter-toggle-btn { display: none; }
+  .filter-curtain { display: block; width: 80%; max-width: 300px; }
+  .right{ position: fixed; top: -88px; right: -100%; height: 100%; overflow-y: scroll; z-index: 9999; transition: right 0.3s ease-in-out; width: 50%; max-width: 310px; border-radius: 0; } 
+  .right.right-open { right: 0;visibility: visible;padding: 15px; }
+  .right.right-open .index-close{display: block;}
+  .right.visible { width: 50%; }
+  .full-view-btn{font-size: 14px;margin: 0 auto 15px;}
+  .full-view-btn span.icon i{ top: 0; }
+  .tag-list ul li { font-size: 14px;padding: 0 7px 0 0;}
+  .pg-det-content { /*padding: 0 4rem;*/ flex-direction: column;}
+  .det-right, .det-left { width: 100%; }
+  .top-subhead{margin-bottom: -46px;}
+
+
   .ins-bnr-con img { height: 250px;}
   .pune-banner-about{margin-bottom: 0px;}
   .pune-bnr-txt { left: 15%; }
@@ -576,38 +604,13 @@ a{text-decoration: none;color: #000;}
 @media (max-width: 768px) {
   .logo{font-size: 28px;padding: 10px 0;}
   .search-btn{margin-left: 7px;}
-  /* .ins-bnr { margin-bottom: -24%; } */
-  /* .ins-bnr-con { top: -165px; } */
   .text-container{justify-content: flex-start;}
   .top-heading{margin-bottom: 10px;}
   .top-subhead { margin-bottom: -40px; }
-  .middle{width: 100%;}
-  .search-container{margin-bottom: 5.5rem;}
-  .navbar{justify-content: space-between;padding: 0 4%;}
-  .nav-links { position: absolute; top: 56px; right: 0; background: #fff; flex-direction: column; width: 100%; display: none; padding: 0px; text-align: left; }
-  .nav-links li a{color: #000 !important;padding: 10px 20px;line-height: 40px;font-size: 14px;}
-  .nav-links li a:hover{color: var(--maincolor) !important;transition: 0.3s;}
-  .nav-links li.nav-active { display: block; background-color: var(--maincolor);}
-  .nav-links li.nav-active a{color: #fff !important;}
-  .menu-toggle { display: inline-block; }
-  .mob-btn-section{display: flex;}
-  .filter-toggle-btn{display: block;}
-  .left { position: fixed; top: -93px; left: -100%; height: 100%; overflow-y: scroll; z-index: 9999; transition: left 0.3s ease-in-out; width: 55%; max-width: 300px; background: #fff; border-radius: 0; } 
-  .left.open { left: 0; }
-  .left.open .close-filter { display: block; }
-  .left.open ~ .filter-toggle-btn { display: none; }
-  .filter-curtain { display: block; width: 80%; max-width: 300px; }
+
   .category-header{font-size: 20px;}
   .filter-options label { font-size: 16px; }
-  .right{ position: fixed; top: -88px; right: -100%; height: 100%; overflow-y: scroll; z-index: 9999; transition: right 0.3s ease-in-out; width: 50%; max-width: 310px; border-radius: 0; } 
-  .right.right-open { right: 0;visibility: visible;padding: 15px; }
-  .right.right-open .index-close{display: block;}
-  .right.visible { width: 50%; }
-  .full-view-btn{font-size: 14px;margin: 0 auto 15px;}
-  .full-view-btn span.icon i{ top: 0; }
-  .tag-list ul li { font-size: 14px;padding: 0 7px 0 0;}
-  .pg-det-content { /*padding: 0 4rem;*/ flex-direction: column;}
-  .det-right, .det-left { width: 100%; }
+  
   .pg-end-cont{width: 100%;}
   .img-cont img { width: 208px; height: 208px; }
   .pune-bnr-txt { left: 16%; }  

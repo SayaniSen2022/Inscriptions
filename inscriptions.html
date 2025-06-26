@@ -32,17 +32,17 @@
                         <span class="line"></span>
                     </div>
                 </button>
-                <button class="search-btn" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <!-- <button class="search-btn" type="button"><i class="fa-solid fa-magnifying-glass"></i></button> -->
             </div>           
         </nav>
     </section>
     <!--Serach Overlay-->
-    <div class="search-overlay" id="searchOverlay">
+    <!-- <div class="search-overlay" id="searchOverlay">
         <div class="search-box">
             <input name="search-site" class="custom-caret" type="text" placeholder="Search...">
             <span class="close-btn" id="closeOverlay">&times;</span>
         </div>
-    </div>
+    </div> -->
     <!--Header End-->
     <!--Main page heading-->
     <section class="ins-bnr">
@@ -530,19 +530,19 @@
             <div class="related-links-container">
                 <div class="related-links" data-target="article1">
                     <div><img src="./images/arrow-right.webp" alt="arrow-right"></div>
-                    <div><a id="link1" href="#">Spurious Kapileswar Stone plaque Inscription</a></div>
+                    <div class="link"><a id="link1" href="#">Spurious Kapileswar Stone plaque Inscription</a></div>
                 </div>
                 <div class="related-links" data-target="article2">
                     <div><img src="./images/arrow-right.webp" alt="arrow-right"></div>
-                    <div><a id="link2" href="#">Copper-plate charter of Budhagupta</a></div>
+                    <div class="link"><a id="link2" href="#">Copper-plate charter of Budhagupta</a></div>
                 </div>
                 <div class="related-links" data-target="article3">
                     <div><img src="./images/arrow-right.webp" alt="arrow-right"></div>
-                    <div><a id="link3" href="#">Sohgaura copper plate inscription</a></div>
+                    <div class="link"><a id="link3" href="#">Sohgaura copper plate inscription</a></div>
                 </div>
                 <div class="related-links" data-target="article4">
                     <div><img src="./images/arrow-right.webp" alt="arrow-right"></div>
-                    <div><a id="link4" href="#">Copper-plate charter of Budhagupta II</a></div>
+                    <div class="link"><a id="link4" href="#">Copper-plate charter of Budhagupta II</a></div>
                 </div>
             </div>
             
@@ -629,24 +629,18 @@
 
         /*************displays related links when a filter is selected*****************/
 
-        if ($(window).width() > 768){
-            $(".filter-name").click(function() {
-                    if ($(".filter:checked").length > 0) {
+         $(document).on('click', '.filter-name', function () {
+            if ($(window).width() > 991){
+                if ($(".filter:checked").length > 0) {
                         $("#right-block").addClass('visible');                  
-                    } else {
-                        $("#right-block").removeClass('visible');
-                    }
-                });
-        }else{
-            $(".filter-name").click(function() {
+                } else { $("#right-block").removeClass('visible'); }
+            }else if($(window).width() <=991){
                 if ($(".filter:checked").length > 0) {
                 $("#right-block").removeClass('visible');
                     $("#indexbtn").addClass('show');
-                } else {
-                    $("#indexbtn").removeClass('show');
-                }
-            });
-        }
+                }else { $("#indexbtn").removeClass('show'); }
+            }
+         });
 
         $("#indexbtn").on('click', function(){
             $('.left').removeClass('open');
@@ -666,54 +660,26 @@
         /*************displays related links when a filter is selected ends*****************/
 
         /*******Link highlight with scroll section ******/
-        $(document).ready(function() {
-        $(window).scroll(function() {
-            var scrollPos = $(window).scrollTop();
+
+        $(document).ready(function () {
+            let $articles = $(".article");
+            let $links = $(".link a");
             
-            // var page1Top = $(".text-container").offset().top;
-            var page1Top = $(window).scrollTop(); //topmost position on page
-            var page2Top = $("#article2").offset().top;
-            var page3Top = $("#article3").offset().top;
-            var page4Top = $("#article4").offset().top;
+            $(window).on("scroll", function () {
+                let scrollPos = $(window).scrollTop();
+                
+                $articles.each(function (index) {           
+                    let $this = $(this);
+                let top = $this.offset().top;
+                let bottom = top + $this.outerHeight();
 
-
-        if ($('#right-block').is(":visible") && scrollPos >= page1Top && scrollPos < page2Top) {
-            $("#link1").addClass("link-active");
-            $("#link2").removeClass("link-active");
-            $("#link3").removeClass("link-active");
-            $("#link4").removeClass("link-active");
-            } else {
-            $("#link1").removeClass("link-active");
-            }
-
-            if ($('#right-block').is(":visible") && scrollPos >= page2Top && scrollPos < page3Top) {
-            $("#link2").addClass("link-active");
-            $("#link1").removeClass("link-active");
-            $("#link3").removeClass("link-active");
-            $("#link4").removeClass("link-active");
-            } else {
-            $("#link2").removeClass("link-active");
-            }
-
-            if ($('#right-block').is(":visible") && scrollPos >= page3Top && scrollPos < page4Top) {
-            $("#link3").addClass("link-active");
-            $("#link1").removeClass("link-active");
-            $("#link2").removeClass("link-active");
-            $("#link4").removeClass("link-active");
-            } else {
-            $("#link3").removeClass("link-active");
-            }
-
-            if ($('#right-block').is(":visible") && scrollPos >= page4Top) {
-            $("#link4").addClass("link-active");
-            $("#link1").removeClass("link-active");
-            $("#link2").removeClass("link-active");
-            $("#link3").removeClass("link-active");
-            } else {
-            $("#link4").removeClass("link-active");
-            }
-
-        });
+                    if ($("#right-block").is(":visible") && scrollPos >= top && scrollPos < bottom) {
+                        $links.removeClass("link-active");
+                        $links.eq(index).addClass("link-active");
+                        return false;
+                    }
+                });
+            });
         });
         /*******Link highlight with scroll section ends******/
 
