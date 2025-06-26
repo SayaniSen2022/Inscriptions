@@ -548,6 +548,63 @@
             
         </div>
     </section>
+    <section class="footer">
+        <div class="container">
+            <div class="footer-row">
+                <div class="footer-col">
+                    <div class="ftr-bx"> <span> <img src="https://heritagetemples.org/public/user_interface/assets/image/ftr-logo.png"> </span> </div>
+                    <div class="ftr-link">
+                        <p>Mapping, Documenting &amp; Conserving the Heritage Temples of India</p>
+                        <p style="display: none;">Contact us with your queries and suggestions at <a href="#" class="cl4"><span style="text-decoration: underline;">templeproject@tattvamag.org</span></a></p>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <div class="f2">
+                        <h3 class="fhead">Quick Links</h3>
+                        <ul>
+                            <li class="mb5"><a href="https://heritagetemples.org" class="cl4">Home</a></li>
+                            <li class="mb5"><a href="https://heritagetemples.org/about-us" class="cl4">About Us</a></li>
+                            <li class="mb5"><a href="https://heritagetemples.org/pune-project" class="cl4">Pune Project</a></li>
+                            <li class="mb5"><a href="https://heritagetemples.org/journal" class="cl4">Journal</a></li>
+                            <li class="mb5"><a href="https://heritagetemples.org/contact-us" class="cl4">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <div class="f2">
+                        <h3 class="fhead">Policies</h3>
+                        <ul>
+                            <li class="mb5"><a href="https://heritagetemples.org/terms-and-conditions" class="cl4">Terms and Condition</a></li>
+                            <li class="mb5"><a href="https://heritagetemples.org/privacy-policies" class="cl4">Privacy policies</a></li>
+                            <li class="mb5"><a href="https://heritagetemples.org/cookies" class="cl4">Plagiarism</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <div class="f2">
+                        <h3 class="fhead">Join Us</h3>
+                        <ul>
+                            <li class="mb5"><a href="#" class="cl4">Subscribe to our newsletter and stay updated.</a></li>
+                            <li class="mb5 mt">
+                                <input type="email" name="subscribe" id="subscribe" placeholder="Enter your email address">
+                            </li>
+                            <li class="mb5">
+                                <div class="sub-btn">
+                                <a href="" id="sub_btn" class="sub_btn">Subscribe</a>
+                                </div>
+                                <div id="msg"></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="legal">
+        <div class="container">
+            <p>©2025 (Site Name). All rights reserved.</p>
+        </div>
+    </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./script.js"></script>
@@ -670,8 +727,8 @@
                 
                 $articles.each(function (index) {           
                     let $this = $(this);
-                let top = $this.offset().top;
-                let bottom = top + $this.outerHeight();
+                    let top = $this.offset().top;
+                    let bottom = top + $this.outerHeight();
 
                     if ($("#right-block").is(":visible") && scrollPos >= top && scrollPos < bottom) {
                         $links.removeClass("link-active");
