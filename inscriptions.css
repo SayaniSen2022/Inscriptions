@@ -243,19 +243,26 @@ a{text-decoration: none;color: #000;}
 .det-e-comment{font-weight: 400;font-size: 15px;line-height: 22px;}
 .pg-end-cont{ /*margin-left: 23.5rem;max-width: 783px;*/width: 67%;margin-top: 35px;margin-bottom: 20px;}
 .pg-end-btn{display: flex ; justify-content: space-between; align-items: center;}
+
+/***Back Button***/
+
 .back-btn{border: 1px solid var(--maincolor);color: var(--maincolor);outline: none;border-radius: 5px;background: #fff;width: 130px;text-align: center;font-weight: 600;font-size: 18px;line-height: 40px;cursor: pointer;transition: 0.3s ease-in-out;}
 .bck-icn-img{width: 20px; height: 20px; transition: all 0.3s ease;position: relative; top: 4px;left: 0px;}
-.back-btn:hover .bck-icn-img{content: url('./images/back.webp');}
+.bck-icn-img-hover{display: none;width: 20px; height: 20px; transition: all 0.3s ease;position: relative; top: 4px;left: 0px;}
+.back-btn:hover .bck-icn-img{display: none;}
+.back-btn:hover .bck-icn-img-hover{display: inline;}
 .back-btn:hover{background: var(--maincolor);color: #fff;transition: 0.3s;}
 .bck-icn{padding-right: 5px;}
 
-
+/***Share Button***/
 .share-btn{position: relative;border: 1px solid #FFF;color: #fff;outline: none;border-radius: 5px;background: var(--maincolor);width: 130px;text-align: center;font-weight: 600;font-size: 18px;line-height: 40px;cursor: pointer;transition: 0.3s ease-in-out;}
 .share-btn a{color: #fff;}
 .share-btn .tooltiptext{visibility: hidden;position: absolute;z-index: 1;opacity: 0;transition: opacity 0.3s ease-in-out;bottom: 43px; left: 0;}
 .share-btn  .tooltiptext::after { content: ""; position: absolute; top: 100%; left: 50%; margin-left: -5px; border-width: 8px; border-style: solid; border-color: #444 transparent transparent transparent; }
 .icon-img{width: 16px; height: 16px; transition: all 0.3s ease;position: relative; top: 2px;left: 5px;}
-.share-btn:hover .icon-img { content: url('./images/share-yellow.webp'); }
+.icon-img-hover{display: none;width: 16px; height: 16px; transition: all 0.3s ease;position: relative; top: 2px;left: 5px;}
+.share-btn:hover .icon-img { display: none; }
+.share-btn:hover .icon-img-hover{ display: inline;}
 .share-btn:hover{background: #FFF;color: var(--maincolor);transition: 0.3s;border: 1px solid var(--maincolor);}
 .share-btn:hover a{color: var(--maincolor);}
 .share-btn:hover .tooltiptext{visibility: visible;opacity: 1;}
