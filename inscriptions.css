@@ -247,12 +247,27 @@ a{text-decoration: none;color: #000;}
 .bck-icn-img{width: 20px; height: 20px; transition: all 0.3s ease;position: relative; top: 4px;left: 0px;}
 .back-btn:hover .bck-icn-img{content: url('./images/back.webp');}
 .back-btn:hover{background: var(--maincolor);color: #fff;transition: 0.3s;}
-.share-btn{border: 1px solid #FFF;color: #fff;outline: none;border-radius: 5px;background: var(--maincolor);width: 130px;text-align: center;font-weight: 600;font-size: 18px;line-height: 40px;cursor: pointer;transition: 0.3s ease-in-out;}
+.bck-icn{padding-right: 5px;}
+
+
+.share-btn{position: relative;border: 1px solid #FFF;color: #fff;outline: none;border-radius: 5px;background: var(--maincolor);width: 130px;text-align: center;font-weight: 600;font-size: 18px;line-height: 40px;cursor: pointer;transition: 0.3s ease-in-out;}
+.share-btn a{color: #fff;}
+.share-btn .tooltiptext{visibility: hidden;position: absolute;z-index: 1;opacity: 0;transition: opacity 0.3s ease-in-out;bottom: 43px; left: 0;}
+.share-btn  .tooltiptext::after { content: ""; position: absolute; top: 100%; left: 50%; margin-left: -5px; border-width: 8px; border-style: solid; border-color: #444 transparent transparent transparent; }
 .icon-img{width: 16px; height: 16px; transition: all 0.3s ease;position: relative; top: 2px;left: 5px;}
 .share-btn:hover .icon-img { content: url('./images/share-yellow.webp'); }
 .share-btn:hover{background: #FFF;color: var(--maincolor);transition: 0.3s;border: 1px solid var(--maincolor);}
-.bck-icn{padding-right: 5px;}
+.share-btn:hover a{color: var(--maincolor);}
+.share-btn:hover .tooltiptext{visibility: visible;opacity: 1;}
+.share-btn:hover .tooltiptext ul{background: #444;width: 130px;padding: 0 10px;display: flex;justify-content: space-around;gap: 1rem;border-radius: 0.5rem;}
+.share-btn:hover .tooltiptext ul li{list-style-type: none;}
+.share-btn:hover .tooltiptext ul li a{color: #fff;}
+.share-btn:hover .tooltiptext ul li:hover a{color: var(--maincolor)}
+
+
+
 .share-icn i{padding-left: 5px;}
+
 
 /****image gallery****/
 .gallery span {font-weight: 600;color: var(--maincolor); }
